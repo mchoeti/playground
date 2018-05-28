@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Convert a string into a function - simple one</h2>
+
+    <p id="demo"></p>
+
+    <!-- Simple JSON Request -->
+    <script>
+        var text = '{ "name":"Christian", "age":"30", "city":"Graz"}';
+        var obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML = obj.name + " is at the age of " + obj.age + " and is based in " +
+            obj.city;
+    </script>
+    <!-- Simple JSON Request end-->
+</body>
+
+</html>
