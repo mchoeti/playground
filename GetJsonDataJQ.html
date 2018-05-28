@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Now we use JQuery to grap data from an API </h2>
+    <p>After that we will display the seelction on an HTML Page</p>
+
+    <p id="demo"></p>
+    <p id="demooutside"></p>
+
+    <script>
+        $.getJSON(
+            'http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback',
+            function (data) {
+                //the complete Data as a console.
+                var fulldata = data;
+                console.log(fulldata);
+
+                var creation = data.query.created;
+                //console.log(creation);
+                //document.getElementById("demo").innerHTML = "This request was created on: " + creation;
+
+                // only the language for console
+                var language = data.query.lang;
+                //console.log(language);
+                // only the language for the id demo
+                //document.getElementById("demo").innerHTML = language;
+            });
+        document.getElementById("demooutside").innerHTML = "Now i am outside the function";
+    </script>
+
+</body>
+
+</html>
