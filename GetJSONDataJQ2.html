@@ -10,7 +10,7 @@
     <h2>Now we use JQuery to grap data from an API</h2>
     <p>After that we will display the seelction on an HTML Page</p>
     <p id="demo"></p>
-    <p id="demooutside"></p>
+    <p id="space"></p>
 
 
     <!-- WOrking  Bevölkerungsdaten-->
@@ -20,9 +20,11 @@
 
             // The name of the callback parameter
             jsonp: "callback",
+            
             // Tell jQuery we're expecting JSONP
             dataType: "jsonp",
             // Work with the response
+           
             success: function (response) {
                 // console.log( response ); // server response
                 console.log("simple request");
@@ -34,18 +36,20 @@
         });
     </script>
 
-
-    <!-- Error script Aufpassen hier nur JSON -->
-    <!-- <script>
+ <!-- Simple how many people are in Space right now -->
+ <script>
         $.ajax({
-            url: 'http://www.howmanypeopleareinspacerightnow.com/space.json',
+            url: 'http://api.open-notify.org/astros.json',
             jsonp: "callback",
             dataType: "jsonp",
             success: function (response) {
-            console.log( response );
+            console.log( response.people );
+            var fullspace = response;
+            //need to know how to add full obect to innerHTML 
+            document.getElementById("space").innerHTML = fullspace[0];
             }
         });
-</script> -->
+</script>
 
 </body>
 
