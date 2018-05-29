@@ -17,17 +17,18 @@
                 // document.getElementById("demo").innerHTML = myObj.name + " is " + myObj.age;
                 // get only Felix
                 //document.getElementById("demo").innerHTML = myObj.pets[1].name;
-                document.getElementById("demo").innerHTML = myObj.numbers;
+                document.getElementById("demo").innerHTML = "At the moment there are: " + myObj.number + " persons in space";
+                console.log(myObj);
             }
         };
 
-        xmlhttp.open("GET", "http://www.howmanypeopleareinspacerightnow.com/space.json#", true);
+        xmlhttp.open("GET", "http://api.open-notify.org/astros.json", true);
         xmlhttp.send();
     </script>
     
     <!-- The File is available here:  -->
     <p>Here is the JSON output from Open Data - How many people are in space right now
-        <a href="http://www.howmanypeopleareinspacerightnow.com/space.json#" target="_blank">JSON File</a>
+        <a href="http://api.open-notify.org/astros.json" target="_blank">JSON File</a>
     </p>
 
 </body>
