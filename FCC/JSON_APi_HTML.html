@@ -16,9 +16,11 @@
                 req.onload = function () {
                     json = JSON.parse(req.responseText);
                     document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
+                    console.log(json[2].codeNames[1]);
                 };
                 // check the value , hier sollte loki stehen
-                console.log(json[2].codeNames[1]);
+                console.log("test");
+                //console.log(json[2].codeNames[1]);
                 // Add your code above this line
             };
         });

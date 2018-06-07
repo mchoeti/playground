@@ -15,16 +15,17 @@
 
     <!-- WOrking  Bevölkerungsdaten-->
     <script>
-        $.ajax({
+        //$.ajax({
+        $.getJSON({
             url: 'https://www.data.gv.at/katalog/api/3/action/package_show?id=016f9b27-bd44-3783-bbe4-c24a312e73d2',
 
             // The name of the callback parameter
             jsonp: "callback",
-            
+
             // Tell jQuery we're expecting JSONP
             dataType: "jsonp",
             // Work with the response
-           
+
             success: function (response) {
                 // console.log( response ); // server response
                 console.log("simple request");
@@ -36,20 +37,26 @@
         });
     </script>
 
- <!-- Simple how many people are in Space right now -->
- <script>
-        $.ajax({
+    <!-- Simple how many people are in Space right now with JQuery really simple-->
+    <script>
+        $.getJSON({
             url: 'http://api.open-notify.org/astros.json',
             jsonp: "callback",
             dataType: "jsonp",
             success: function (response) {
-            console.log( response.people );
-            var fullspace = response;
-            //need to know how to add full obect to innerHTML 
-            document.getElementById("space").innerHTML = fullspace[0];
+                var fullspace = response;
+                //need to know how to add full obect to innerHTML 
+                //document.getElementById("space").innerHTML = "This is for the space " + fullspace[0];
+                for (i = 0; i <= 5; i++) {
+                    console.log(response.people[i].name);
+                    //hm.. only the last element will be displayed
+                    document.getElementById("space").innerHTML = "This is for the space and here are the names: <br>" + response.people[i].name;
+                }
+                //document.getElementById("space").innerHTML = "This is for the space and here are the names: <br>" + response.people[0].name;
+
             }
         });
-</script>
+    </script>
 
 </body>
 
