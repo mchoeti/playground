@@ -19,3 +19,18 @@ function convertToInteger(str) {
   }
   console.log(convertToInteger("10011"));
   convertToInteger("10011");
+
+  // simpler equal check für eine Condition
+  function checkEqual(a, b) {
+    return a == b ? true : false;
+  }
+  console.log(checkEqual(1, 2));
+  checkEqual(1, 2);
+  
+  // mehr als eine condition
+  function checkSign(num) {
+    return (num === 0) ? "zero" : (num > 0 ) ? "positive" : "negative" ;
+    }
+    console.log(checkSign(10))
+    checkSign(10);
+    
