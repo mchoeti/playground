@@ -11,3 +11,11 @@ function convertToInteger(str) {
 
   //Done
   
+  // convert number in binary
+  //  parseInt(string, radix) wobei radix optional ist und eine nummer von 2-36 hat, bei einem binären eben 2
+
+  function convertToInteger(str) {
+    return parseInt(str, 2)
+  }
+  console.log(convertToInteger("10011"));
+  convertToInteger("10011");
