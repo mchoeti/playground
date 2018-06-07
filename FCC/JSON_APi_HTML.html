@@ -9,13 +9,16 @@
             document.getElementById('getMessage').onclick = function () {
                 // Add your code below this line
                 req = new XMLHttpRequest();
-                req.open("GET", '/json/cats.json', true);
+                //req.open("GET", '/json/cats.json', true);
+                req.open("GET", 'https://www.freecodecamp.org/json/cats.json', true);
+
                 req.send();
                 req.onload = function () {
                     json = JSON.parse(req.responseText);
                     document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
                 };
-
+                // check the value , hier sollte loki stehen
+                console.log(json[2].codeNames[1]);
                 // Add your code above this line
             };
         });
