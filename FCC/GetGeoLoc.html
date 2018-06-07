@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <h1>Get Geo Location</h1>
+
+    <script>
+        // Simple Use of Browser Geo Location 
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                document.getElementById('data').innerHTML = "latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude + " <br> Cool oder";
+            });
+        }
+
+        // End of Geolocation 
+    </script>
+    <h4>You are here:</h4>
+    <div id="data">
+
+    </div>
+
+</body>
+
+</html>
