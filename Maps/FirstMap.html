@@ -44,14 +44,28 @@
                     // check the options here https://developers.google.com/maps/documentation/javascript/reference/3/marker#MarkerOptions
                     position: graz,
                     map: map,
-                    title: "Hello Graz"
+                    title: "Hello Graz",
+                    // add special marker
+                    icon: "https://maps.google.com/mapfiles/kml/shapes/info-i_maps.png",
+                    //animation: google.maps.Animation.BOUNCE,
+                    animation: google.maps.Animation.DROP,
                 }
             );
+            var infoWindow = new google.maps.InfoWindow(
+                {
+                    //content: '<h1>Graz is a student city</h1>'
+                    content: "Sometimes"
+                });
+            //execute and display the info window with a mouseclick    
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+            });
+
         }
 
     </script>
     <!-- Add Script for API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?yourkey&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyCQa3YNC0Z5bjyvGySyONIpR2SVakm8GnI&callback=initMap">
     </script>
 
 </body>
