@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Map as simple as she can be</title>
+
+    <!-- Um die MAP anzuzeigen brauchen wit noch die Größe -->
+    <style>
+        /* Set the size of the div element that contains the map */
+
+        #map {
+            height: 600px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>GAK Landesliga Vereine</h1>
+    <div id="map"></div>
+    <script>
+        // init funtion because the callback is set to this function 
+        // Initialize and add the map
+        function initMap() {
+            // Optionen Setzen hier zoom und center auf Graz
+            // Graz center: { lat: 47.076668, lng: 15.421371 }
+            var graz = { lat: 47.076668, lng: 15.421371 };
+            //options anwenden
+            var options = {
+                zoom: 8,
+                center: graz
+            }
+            // neue MAPPE instanzieren
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+            // Array of markers
+            var markers = [
+                {
+                    coords: { lat: 47.076668, lng: 15.421371 },
+                    map: map,
+                    title: "Hello Graz",
+                    icon: "http://hoeserle.at/wp-content/uploads/2018/06/GAKSmall.png",
+                    //iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>Home of GAK</h1>',
+                    animation: google.maps.Animation.BOUNCE,
+                },
+                {
+                    coords: { lat: 46.8285205, lng: 15.9771335 },
+                    content: '<h3>USV St. Anna</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.856033, lng: 15.5275118 },
+                    content: '<h3>SV Lebring</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.406348, lng: 15.253579 },
+                    content: '<h3>SC Bruck/Mur</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.035643, lng: 16.087508 },
+                    content: '<h3>SC Fürstenfeld</h3>',
+                    map: map,
+                }
+            ];
+
+            // Loop through markers
+            for (var i = 0; i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // NEue Marker FUnction , step 2 bestimmen
+            function addMarker(props) {
+                var marker = new google.maps.Marker(
+                    {
+                        position: props.coords,
+                        //content: props.content,
+                        map: map,
+                        icon: props.icon
+                    }
+                );
+                // Check for customisaion // have to check tomorrow
+                if (props.icon) {
+                    // Set icon image
+                    marker.setIcon(props.icon);
+                    // set Animation
+                    marker.setAnimation(props.animation);
+                }
+
+                // Check content
+                if(props.content){
+                var infoWindow = new google.maps.InfoWindow({
+                content:props.content
+                });
+
+                 marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+                });
+        }
+
+
+
+            }
+        }
+
+    </script>
+    <!-- Add Script for API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyCQa3YNC0Z5bjyvGySyONIpR2SVakm8GnI&callback=initMap">
+    </script>
+
+</body>
+
+</html>
