@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Map as simple as she can be</title>
+    <title>Gak Landeslige 17/18</title>
 
     <!-- Um die MAP anzuzeigen brauchen wit noch die Größe -->
     <style>
@@ -14,15 +14,20 @@
         #map {
             height: 600px;
             /* The height is 400 pixels */
-            width: 100%;
+            width: 50%;
             /* The width is the width of the web page */
+            /* center the map*/
+            margin: 0 auto 0 auto;
+        }
+        h1 {
+            text-align: center;
         }
     </style>
 
 </head>
 
 <body>
-    <h1>GAK Landesliga Vereine</h1>
+    <h1>Landesliga 2017/2018</h1>
     <div id="map"></div>
     <script>
         // init funtion because the callback is set to this function 
@@ -33,7 +38,7 @@
             var graz = { lat: 47.076668, lng: 15.421371 };
             //options anwenden
             var options = {
-                zoom: 8,
+                zoom: 8.5,
                 center: graz
             }
             // neue MAPPE instanzieren
@@ -69,6 +74,51 @@
                 {
                     coords: { lat: 47.035643, lng: 16.087508 },
                     content: '<h3>SC Fürstenfeld</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.8045981, lng: 15.7127995 },
+                    content: '<h3>SC Mettersdorf</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.9565496, lng: 15.5882704},
+                    content: '<h3>TUS Heiligenkreuz</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.683280, lng: 15.995504 },
+                    content: '<h3>Fc Bad Radkersburg</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.297469, lng: 15.837554},
+                    content: '<h3>TSV Pöllau</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.376707, lng: 15.078030 },
+                    content: '<h3>DSV Leoben</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.912135, lng: 15.552729 },
+                    content: '<h3>SV Wildon</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.562556, lng: 14.250419 },
+                    content: '<h3>SC Liezen</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.432853, lng: 15.013747 },
+                    content: '<h3>FC Trofaiach</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.444627, lng: 15.299807 },
+                    content: '<h3>KSV Amateure</h3>',
                     map: map,
                 }
             ];
