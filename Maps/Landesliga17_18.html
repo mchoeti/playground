@@ -19,6 +19,7 @@
             /* center the map*/
             margin: 0 auto 0 auto;
         }
+
         h1 {
             text-align: center;
         }
@@ -82,7 +83,7 @@
                     map: map,
                 },
                 {
-                    coords: { lat: 46.9565496, lng: 15.5882704},
+                    coords: { lat: 46.9565496, lng: 15.5882704 },
                     content: '<h3>TUS Heiligenkreuz</h3>',
                     map: map,
                 },
@@ -92,7 +93,7 @@
                     map: map,
                 },
                 {
-                    coords: { lat: 47.297469, lng: 15.837554},
+                    coords: { lat: 47.297469, lng: 15.837554 },
                     content: '<h3>TSV Pöllau</h3>',
                     map: map,
                 },
@@ -148,15 +149,15 @@
                 }
 
                 // Check content - brauch ich fürs InfoWindow
-                if(props.content){
-                var infoWindow = new google.maps.InfoWindow({
-                content:props.content
-                });
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
 
-                 marker.addListener('click', function(){
-                infoWindow.open(map, marker);
-                });
-        }
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+                }
 
 
 
