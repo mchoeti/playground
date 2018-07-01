@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>Gak Landeslige 17/18</title> -->
+
+    <!-- Um die MAP anzuzeigen brauchen wit noch die Größe -->
+    <style>
+        /* Set the size of the div element that contains the map */
+
+        #map {
+            height: 600px;
+            /* The height is 400 pixels */
+            width: 50%;
+            /* The width is the width of the web page */
+            /* center the map*/
+            margin: 0 auto 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Landesliga 2017/2018</h1>
+    <div id="map"></div>
+    <script>
+        // init funtion because the callback is set to this function 
+        // Initialize and add the map
+        function initMap() {
+            // Optionen Setzen hier zoom und center auf Graz
+            // Graz center: { lat: 47.076668, lng: 15.421371 }
+            var graz = { lat: 47.076668, lng: 15.421371 };
+            //options anwenden
+            var options = {
+                zoom: 8.5,
+                center: graz
+            }
+            // neue MAPPE instanzieren
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+            // Array of markers
+            var markers = [
+                {
+                    coords: { lat: 47.076668, lng: 15.421371 },
+                    map: map,
+                    title: "Hello Graz",
+                    icon: "http://hoeserle.at/wp-content/uploads/2018/06/GAKSmall.png",
+                    //iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>Home of GAK</h1>',
+                    animation: google.maps.Animation.BOUNCE,
+                },
+                {
+                    coords: { lat: 46.8285205, lng: 15.9771335 },
+                    content: '<h3>USV St. Anna</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.856033, lng: 15.5275118 },
+                    content: '<h3>SV Lebring</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.406348, lng: 15.253579 },
+                    content: '<h3>SC Bruck/Mur</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.035643, lng: 16.087508 },
+                    content: '<h3>SC Fürstenfeld</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.8045981, lng: 15.7127995 },
+                    content: '<h3>SC Mettersdorf</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.9565496, lng: 15.5882704 },
+                    content: '<h3>TUS Heiligenkreuz</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.683280, lng: 15.995504 },
+                    content: '<h3>Fc Bad Radkersburg</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.297469, lng: 15.837554 },
+                    content: '<h3>TSV Pöllau</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.376707, lng: 15.078030 },
+                    content: '<h3>DSV Leoben</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 46.912135, lng: 15.552729 },
+                    content: '<h3>SV Wildon</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.562556, lng: 14.250419 },
+                    content: '<h3>SC Liezen</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.432853, lng: 15.013747 },
+                    content: '<h3>FC Trofaiach</h3>',
+                    map: map,
+                },
+                {
+                    coords: { lat: 47.444627, lng: 15.299807 },
+                    content: '<h3>KSV Amateure</h3>',
+                    map: map,
+                }
+            ];
+
+            // Loop through markers
+            for (var i = 0; i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // NEue Marker FUnction , step 2 bestimmen
+            function addMarker(props) {
+                var marker = new google.maps.Marker(
+                    {
+                        position: props.coords,
+                        //content: props.content,
+                        map: map,
+                        icon: props.icon
+                    }
+                );
+                // Check for customisaion // have to check tomorrow
+                if (props.icon) {
+                    // Set icon image
+                    marker.setIcon(props.icon);
+                    // set Animation
+                    marker.setAnimation(props.animation);
+                }
+
+                // Check content - brauch ich fürs InfoWindow
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+                }
+
+
+
+            }
+        }
+
+    </script>
+    <!-- Add Script for API and more, check API Resticts in GCP-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQa3YNC0Z5bjyvGySyONIpR2SVakm8GnI&callback=initMap">
+    </script>
+
+</body>
+
+</html>
