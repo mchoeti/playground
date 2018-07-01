@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0" />
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body id="map-container">
+    <div id="map"></div>
+    <script>
+        // [START script-body]
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                // new center at europe set zoom to 3.5
+                center: {
+                    lat: 45.03,
+                    lng: 34.11
+                },
+                zoom: 5,
+                // new map type hybrit, roadmap oder satelite
+                mapTypeId: 'roadmap'
+            });
+
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: 47.07,
+                    lng: 15.43
+                },
+                //map: map,
+                title: "Hello World! This is Graz i am only visible when hoovering"
+            });
+            // add marker weil in der function initMap map notwendig is
+            marker.setMap(map);
+
+            // A new pop Up window to display Graz
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<h1>Welcome to Graz :-)</h1>'
+            });
+            // Here is a listener which interact with your mouseclick
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+
+
+
+
+            // ARRAY of Markes CHRis begin
+            var markers = [{
+                    coords: {
+                        lat: 36.094429,
+                        lng: 28.086242
+                    },
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>Lindos Beach</h1>'
+                },
+                {
+                    coords: {
+                        lat: 36.456983,
+                        lng: 28.220800
+                    },
+                    content: '<h1>Rhodos</h1>'
+                },
+                {
+                    coords: {
+                        lat: 36.332335,
+                        lng: 28.206555,
+                        content: '<h2>Faliraki</h2>'
+                    }
+                }
+            ];
+
+            // Loop through markers
+            for (var i = 0; i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // Add Marker Function
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    //icon:props.iconImage
+                });
+            }
+
+            
+
+
+            // ARRAY of Markes CHRis end
+
+
+
+
+
+
+            // Get the earthquake data (JSONP format)
+            // This feed is a copy from the USGS feed, you can find the originals here:
+            //   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+            var script = document.createElement('script');
+            script.setAttribute(
+                'src',
+                'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        // Defines the callback function referenced in the jsonp file.
+        function eqfeed_callback(data) {
+            map.data.addGeoJson(data);
+        }
+        // [END script-body]
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQa3YNC0Z5bjyvGySyONIpR2SVakm8GnI&callback=initMap"></script>
+</body>
+
+</html>
