@@ -1,0 +1,43 @@
+html,body{
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    text-align:center;
+    min-width:260px;
+    color:#333;
+  }
+  #main{
+    margin:30px auto;
+    padding:15px;
+    border:0px solid;
+    border-radius:5px;
+    background:#eee;
+  }
+  img{
+    max-width: 100%; 
+    display: block; 
+    height: auto;
+    margin: auto;
+  }
+
+  h1,h2,h3 {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    text-align:center;
+    text-decoration: underline;
+    color:#333;
+  }
+  h4 {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    text-align:center;
+    text-decoration: underline;
+    color:rgb(7, 23, 253);
+  }
+  div {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    text-align: justify;
+    color:#333; 
+
+
+  }
+  #img-caption {
+   color:rgb(201, 201, 201);
+   text-align: center;
+  }
