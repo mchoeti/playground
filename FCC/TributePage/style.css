@@ -7,7 +7,7 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     box-shadow: 30px 0px 40px rgba(0,0,0,0.2),
                -30px 0px 40px rgba(0,0,0,0.2);
