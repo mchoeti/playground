@@ -64,7 +64,8 @@ var person = {
   sex: 'male',
   sound: 'YEAHHHH'
 }
-// wir destructurieren also person in 2 lokale variablen, species und sound daher werden die eigenschafen 'male' und 'Yeah' zu lokalen variablen assigned was uns wiederum ermöglicht sie anzusprechen 
+// wir destructurieren also person in 2 lokale variablen, 
+// species und sound daher werden die eigenschafen 'male' und 'Yeah' zu lokalen variablen assigned was uns wiederum ermöglicht sie anzusprechen 
 var { species, sound} = person;
 console.log("The " + species + " says " + sound);
 
