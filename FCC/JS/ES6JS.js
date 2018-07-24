@@ -25,3 +25,34 @@ const myConcat = (arr1, arr2) => {
   };
   // test your code
   console.log(myConcat([1, 2], [3, 4, 5]));
+
+  // Default setting 
+  function greeting(name = "Anonymous") {
+    return "Hello " + name;
+  }
+  console.log(greeting("John")); // Hello John
+  console.log(greeting()); // Hello Anonymous
+
+// Simple increment function with values
+function increment(value = 3) {
+  return value + 1;
+  //return "Number is" + value;
+}
+console.log(increment(5, 7)); // Returns 5
+console.log(increment()); // Returns 3
+
+
+const increment1 = (function() {
+  "use strict";
+  return function increment1(number, value = 1) {
+    return number + value;
+  };
+})();
+console.log("This is short " + increment1(5, 20)); // returns 25
+console.log("This is default " + increment1(5)); // return 6
+
+// cool destructuring
+// with JS 6
+var vaxel = { x: 20, y: 30, z: 40 };
+const { x,y,z} = vaxel;
+console.log(y,z,x);
