@@ -56,3 +56,15 @@ console.log("This is default " + increment1(5)); // return 6
 var vaxel = { x: 20, y: 30, z: 40 };
 const { x,y,z} = vaxel;
 console.log(y,z,x);
+
+// a simple destruction with some additional features
+var person = {
+  species: 'human',
+  weight: 76,
+  sex: 'male',
+  sound: 'YEAHHHH'
+}
+// wir destructurieren also person in 2 lokale variablen, species und sound daher werden die eigenschafen 'male' und 'Yeah' zu lokalen variablen assigned was uns wiederum ermöglicht sie anzusprechen 
+var { species, sound} = person;
+console.log("The " + species + " says " + sound);
+
