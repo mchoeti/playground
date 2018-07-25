@@ -92,3 +92,17 @@ console.log(sum(1,2,3,4)); // 10
 var arr = [6, 1902, 3, 45];
 var maximus = Math.max.apply(null, arr); // returns 89
 console.log(maximus); // sollte 1902 sein 
+
+// simpler one
+const arr1 = [6, 89, 3, 45];
+const maximus1 = Math.max(...arr1); // returns 89
+console.log(maximus1); // wäre 89
+
+// solution for an array duplicate ...arr returns an unpacked array. In other words, it spreads the array.
+const arrold = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arrNew;
+(function() {
+  "use strict";
+  arrNew = [...arrold]; // change this line
+})();
+console.log(arrNew);
