@@ -69,3 +69,26 @@ var person = {
 var { species, sound} = person;
 console.log("The " + species + " says " + sound);
 
+
+// Rest Operator example
+// function howMany(...args) {
+//   return "You have passed " + args.length + " arguments.";
+// }
+// console.log(howMany(0, 1, 2)); // You have passed 3 arguments
+// console.log(howMany("string", null, [1, 2, 3], { })); // You have passed 4 arguments.
+
+
+// challenge solved, delete const
+const sum = (function() {
+  "use strict";
+  return function sum(...args) {
+    //const args = [ x, y, z ];
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1,2,3,4)); // 10
+
+// Maximalen Wert aus einem Array nehmen
+var arr = [6, 1902, 3, 45];
+var maximus = Math.max.apply(null, arr); // returns 89
+console.log(maximus); // sollte 1902 sein 
