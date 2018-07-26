@@ -106,3 +106,40 @@ let arrNew;
   arrNew = [...arrold]; // change this line
 })();
 console.log(arrNew);
+
+// reassignemnt with LENGTH
+function getLength(str) {
+  "use strict";
+ // Übernahme der Eingabe (str) und zuweisen auf len 
+  const {length : len } = str;  
+  return len; 
+}
+console.log(getLength('It will be counted or something like this')); // sollte 41 sein 
+
+// example
+const a = {
+  start: { x: 5, y: 902},
+  end: { x: 1902, y: -9 }
+};
+const { start : { x: startX, y: startY }} = a;
+console.log(startX, startY); // 5, 6
+const { end: { x: chrisX , y: chrisY}} = a;
+// Ausgabe 2 er Werte aus einem geschachteltem Array
+console.log(chrisX, startY);
+
+
+// Solution for Destructuring Assignment to Assign Variables from Nested Objects // challenge
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  //const maxOfTomorrow = undefined; // change this line
+  //simple one const maxOfTomorrow = LOCAL_FORECAST.tomorrow.max;
+  const { tomorrow: { max: maxOfTomorrow}} = forecast
+  return (maxOfTomorrow);
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
