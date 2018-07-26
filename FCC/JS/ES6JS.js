@@ -127,7 +127,7 @@ const { end: { x: chrisX , y: chrisY}} = a;
 // Ausgabe 2 er Werte aus einem geschachteltem Array
 console.log(chrisX, startY);
 
-
+// --- next challenge begin
 // Solution for Destructuring Assignment to Assign Variables from Nested Objects // challenge
 const LOCAL_FORECAST = {
   today: { min: 72, max: 83 },
@@ -143,3 +143,4 @@ function getMaxOfTmrw(forecast) {
 }
 
 console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
+// --- next challenge end
