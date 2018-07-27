@@ -144,3 +144,27 @@ function getMaxOfTmrw(forecast) {
 
 console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
 // --- next challenge end
+
+//Use Destructuring Assignment to Assign Variables from Arrays
+const [ab, bc] = [1, 2, 3, 4, 5, 6];
+console.log(ab, bc); // 1, 2
+// oder hier wenn ich gerne wert 5 im array hätte
+const [aa, bb,,, cc] = [1, 2, 3, 4, 55, 6];
+console.log(aa, bb, cc); // 1, 2, 55
+
+// //Lösung für Challenge
+// let a = 8,
+//     b = 6;
+// (() => {
+//     "use strict";
+//     // change code below this line
+//     [a, b] = [b, a];
+//     // change code above this line
+// })();
+// console.log(a); // should be 6
+// console.log(b); // should be 8
+
+// Use Destructuring Assignment with the Rest Operator to Reassign Array Elementconst 
+[first, second, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log("Aus dem Array " + first, second); // 1, 2
+console.log("Restliche Werte " + arr); // [3, 4, 5, 7]
