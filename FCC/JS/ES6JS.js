@@ -168,3 +168,57 @@ console.log(aa, bb, cc); // 1, 2, 55
 [first, second, ...arr] = [1, 2, 3, 4, 5, 7];
 console.log("Aus dem Array " + first, second); // 1, 2
 console.log("Restliche Werte " + arr); // [3, 4, 5, 7]
+
+
+// Destructing for Beginners - Part 1 begin
+// nett und einfach erklärt wie man destruction kann
+
+const personCH = {name:"Christian", age:23, occupation:"Defender of the Universe"};
+// destructing assignment in function arguments
+function whoIsThisDude({name,occupation:job}){
+  console.log(`Hi! I'm ${name}. I'm a ${job}`);
+}
+whoIsThisDude(personCH);
+
+// destructuring assignment inside function
+function whoIsThisDude2(someDude){
+  const {name, occupation:job} = someDude;
+  console.log(`Hi! I'm ${name}. I'm a ${job}`);
+}
+whoIsThisDude2(personCH);
+// Destructing for Beginners - Part 1 end
+
+// Es Destruction Challenge solution
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+//const half = (function() {
+  "use strict"; // do not change this line
+  // change code below this line
+  const half = ({max, min}) => ((max + min) / 2.0) ;
+  // optional with full
+  const full  =({max, min}) => ((max + min));
+  // change code above this line
+
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+// optional with full
+console.log(full(stats)); // should be 56.03
+
+// simples beispiel für eine perfekte Saison des GAK 
+const GAK= {
+  pointsWin: 3,
+  pointsDraw: 1,
+  pointsLoose: 0,
+  gamesToPlay: 30,
+};
+
+// zuerst die benutzen variablen und hinter => wird was gemacht
+// perfect Season ist eine FUNKTION !!!!
+const perfectSeason = ({gamesToPlay, pointsWin}) => ((gamesToPlay * pointsWin));
+console.log ("Perfect Seasons means " + perfectSeason(GAK) +  " points");
