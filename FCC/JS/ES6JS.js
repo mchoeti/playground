@@ -20,18 +20,18 @@ console.log(doubler);
 
 // Array mit einer Arrow Function Lösung 
 const myConcat = (arr1, arr2) => {
-    "use strict";
-    return arr1.concat(arr2);
-  };
-  // test your code
-  console.log(myConcat([1, 2], [3, 4, 5]));
+  "use strict";
+  return arr1.concat(arr2);
+};
+// test your code
+console.log(myConcat([1, 2], [3, 4, 5]));
 
-  // Default setting 
-  function greeting(name = "Anonymous") {
-    return "Hello " + name;
-  }
-  console.log(greeting("John")); // Hello John
-  console.log(greeting()); // Hello Anonymous
+// Default setting 
+function greeting(name = "Anonymous") {
+  return "Hello " + name;
+}
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous
 
 // Simple increment function with values
 function increment(value = 3) {
@@ -42,7 +42,7 @@ console.log(increment(5, 7)); // Returns 5
 console.log(increment()); // Returns 3
 
 
-const increment1 = (function() {
+const increment1 = (function () {
   "use strict";
   return function increment1(number, value = 1) {
     return number + value;
@@ -54,8 +54,8 @@ console.log("This is default " + increment1(5)); // return 6
 // cool destructuring
 // with JS 6
 var vaxel = { x: 20, y: 30, z: 40 };
-const { x,y,z} = vaxel;
-console.log(y,z,x);
+const { x, y, z } = vaxel;
+console.log(y, z, x);
 
 // a simple destruction with some additional features
 var person = {
@@ -66,7 +66,7 @@ var person = {
 }
 // wir destructurieren also person in 2 lokale variablen, 
 // species und sound daher werden die eigenschafen 'male' und 'Yeah' zu lokalen variablen assigned was uns wiederum ermöglicht sie anzusprechen 
-var { species, sound} = person;
+var { species, sound } = person;
 console.log("The " + species + " says " + sound);
 
 
@@ -79,14 +79,14 @@ console.log("The " + species + " says " + sound);
 
 
 // challenge solved, delete const
-const sum = (function() {
+const sum = (function () {
   "use strict";
   return function sum(...args) {
     //const args = [ x, y, z ];
     return args.reduce((a, b) => a + b, 0);
   };
 })();
-console.log(sum(1,2,3,4)); // 10
+console.log(sum(1, 2, 3, 4)); // 10
 
 // Maximalen Wert aus einem Array nehmen
 var arr = [6, 1902, 3, 45];
@@ -101,7 +101,7 @@ console.log(maximus1); // wäre 89
 // solution for an array duplicate ...arr returns an unpacked array. In other words, it spreads the array.
 const arrold = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arrNew;
-(function() {
+(function () {
   "use strict";
   arrNew = [...arrold]; // change this line
 })();
@@ -110,20 +110,20 @@ console.log(arrNew);
 // reassignemnt with LENGTH
 function getLength(str) {
   "use strict";
- // Übernahme der Eingabe (str) und zuweisen auf len 
-  const {length : len } = str;  
-  return len; 
+  // Übernahme der Eingabe (str) und zuweisen auf len 
+  const { length: len } = str;
+  return len;
 }
 console.log(getLength('It will be counted or something like this')); // sollte 41 sein 
 
 // example
 const a = {
-  start: { x: 5, y: 902},
+  start: { x: 5, y: 902 },
   end: { x: 1902, y: -9 }
 };
-const { start : { x: startX, y: startY }} = a;
+const { start: { x: startX, y: startY } } = a;
 console.log(startX, startY); // 5, 6
-const { end: { x: chrisX , y: chrisY}} = a;
+const { end: { x: chrisX, y: chrisY } } = a;
 // Ausgabe 2 er Werte aus einem geschachteltem Array
 console.log(chrisX, startY);
 
@@ -138,7 +138,7 @@ function getMaxOfTmrw(forecast) {
   "use strict";
   //const maxOfTomorrow = undefined; // change this line
   //simple one const maxOfTomorrow = LOCAL_FORECAST.tomorrow.max;
-  const { tomorrow: { max: maxOfTomorrow}} = forecast
+  const { tomorrow: { max: maxOfTomorrow } } = forecast
   return (maxOfTomorrow);
 }
 
@@ -149,7 +149,7 @@ console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
 const [ab, bc] = [1, 2, 3, 4, 5, 6];
 console.log(ab, bc); // 1, 2
 // oder hier wenn ich gerne wert 5 im array hätte
-const [aa, bb,,, cc] = [1, 2, 3, 4, 55, 6];
+const [aa, bb, , , cc] = [1, 2, 3, 4, 55, 6];
 console.log(aa, bb, cc); // 1, 2, 55
 
 // //Lösung für Challenge
@@ -173,16 +173,16 @@ console.log("Restliche Werte " + arr); // [3, 4, 5, 7]
 // Destructing for Beginners - Part 1 begin
 // nett und einfach erklärt wie man destruction kann
 
-const personCH = {name:"Christian", age:23, occupation:"Defender of the Universe"};
+const personCH = { name: "Christian", age: 23, occupation: "Defender of the Universe" };
 // destructing assignment in function arguments
-function whoIsThisDude({name,occupation:job}){
+function whoIsThisDude({ name, occupation: job }) {
   console.log(`Hi! I'm ${name}. I'm a ${job}`);
 }
 whoIsThisDude(personCH);
 
 // destructuring assignment inside function
-function whoIsThisDude2(someDude){
-  const {name, occupation:job} = someDude;
+function whoIsThisDude2(someDude) {
+  const { name, occupation: job } = someDude;
   console.log(`Hi! I'm ${name}. I'm a ${job}`);
 }
 whoIsThisDude2(personCH);
@@ -198,12 +198,12 @@ const stats = {
   average: 35.85
 };
 //const half = (function() {
-  "use strict"; // do not change this line
-  // change code below this line
-  const half = ({max, min}) => ((max + min) / 2.0) ;
-  // optional with full
-  const full  =({max, min}) => ((max + min));
-  // change code above this line
+"use strict"; // do not change this line
+// change code below this line
+const half = ({ max, min }) => ((max + min) / 2.0);
+// optional with full
+const full = ({ max, min }) => ((max + min));
+// change code above this line
 
 console.log(stats); // should be object
 console.log(half(stats)); // should be 28.015
@@ -211,7 +211,7 @@ console.log(half(stats)); // should be 28.015
 console.log(full(stats)); // should be 56.03
 
 // simples beispiel für eine perfekte Saison des GAK 
-const GAK= {
+const GAK = {
   pointsWin: 3,
   pointsDraw: 1,
   pointsLoose: 0,
@@ -220,5 +220,29 @@ const GAK= {
 
 // zuerst die benutzen variablen und hinter => wird was gemacht
 // perfect Season ist eine FUNKTION !!!!
-const perfectSeason = ({gamesToPlay, pointsWin}) => ((gamesToPlay * pointsWin));
-console.log ("Perfect Seasons means " + perfectSeason(GAK) +  " points");
+const perfectSeason = ({ gamesToPlay, pointsWin }) => ((gamesToPlay * pointsWin));
+console.log("Perfect Seasons means " + perfectSeason(GAK) + " points");
+console.log("Erstes Match, 3:0 ergibt 3 Punkte !!!")
+
+// Create simple Person
+const createPerson = (name, age, gender) => {
+  "use strict";
+  return ({name, age, gender});
+};
+console.log(createPerson("Die Werte sind: " + "Zodiac Hasbro", 56, "male")); // returns a proper object
+// mit Return gibts das Objekt zurück
+
+// Neue functionen in ES6
+// früher musste die function so angesetzt werden setGeart: function (newGear)
+// Lösung in ES6 wäre einfach setGear (newGear)
+// change code below this line
+const bicycle = {
+  gear: 2,
+  setGear (newGear) {
+    "use strict";
+    this.gear = newGear;
+  }
+};
+// change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
