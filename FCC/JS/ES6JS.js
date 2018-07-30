@@ -227,22 +227,103 @@ console.log("Erstes Match, 3:0 ergibt 3 Punkte !!!")
 // Create simple Person
 const createPerson = (name, age, gender) => {
   "use strict";
-  return ({name, age, gender});
+  return ({ name, age, gender });
 };
 console.log(createPerson("Die Werte sind: " + "Zodiac Hasbro", 56, "male")); // returns a proper object
 // mit Return gibts das Objekt zurück
 
-// Neue functionen in ES6
-// früher musste die function so angesetzt werden setGeart: function (newGear)
-// Lösung in ES6 wäre einfach setGear (newGear)
+// Functions in ES 6 
 // change code below this line
 const bicycle = {
   gear: 2,
-  setGear (newGear) {
+  // so wars in ES5
+  // setGear: function (newGear) {
+  //   "use strict";
+  //   this.gear = newGear;
+  // }
+  // so is es in ES 6
+  setGear(newGear) {
     "use strict";
     this.gear = newGear;
   }
+
+
 };
 // change code above this line
 bicycle.setGear(3);
 console.log(bicycle.gear);
+
+// Neue Klassen 
+function makeClass() {
+  "use strict";
+  /* Alter code below this line */
+  // constructor(Vegetable) {
+  //   this.Vegetable = Vegetable;
+  // }
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  /* Alter code above this line */
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
+
+
+// Getter and Setter 
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer(){
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor){
+    this._author = updatedAuthor;
+  }
+}
+const lol = new Book('Unbekannter Author');
+console.log(lol.writer);  // Unbekannter Author
+lol.writer = 'Christian';
+console.log(lol.writer);  // Christian
+
+//---------------------------------------------
+// Das THermostat anpassen und testen
+function makeClass() {
+  "use strict";
+  /* Alter code below this line */
+  class Thermostat {
+    constructor(temperature) {
+      this._temperature = temperature;
+    }
+    get temperature() {
+      //umrechnung 
+      return (this._temperature - 32.0) * 5.0 / 9.0 ;
+    }
+    set temperature(updatedTemp) {
+       this._temperature = ((updatedTemp * 9.0) / 5.0) + 32.0;
+    }
+  }
+  /* Alter code above this line */
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
+console.log(temp);
+//---------------------------------------------
+
+// export Fallback with default values
+export default function minus(x, y) { return x - y; }
+
+export default function subtract(x,y) 
+{
+  return x - y;
+}
