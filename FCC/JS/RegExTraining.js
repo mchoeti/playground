@@ -7,4 +7,16 @@ let result2 = myRegex.test(myString2); // Auch hier suchen wir nach dem Sting He
 console.log(result);  // Wird gefunden daher auch true :-)
 console.log("Sollte false liefern, Ergebnis = " + result2); 
 
+// Nach mehr als einem Ausdruck suchen 
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Wie mit Operatoren  also dog|cat usw..
+let result1 = petRegex.test(petString);
+console.log(result1); // liefert true weil einer der Strings gefunden wird.
+
+// Hier wäre und die Groß und KLeinschreibung egal
+let myString3 = "Das it mein zweiter String, das gibts keine Begrüßung, wir suchen nach CHRIS";
+let fccRegex = /chris/i; // Change this line
+let result3 = fccRegex.test(myString3);
+console.log("Wurde Chris gefunden? :" + result3);  // Chris wird gefunden aber die schreibweise ignoriert mit dem i Schlüsselwort
+
 
