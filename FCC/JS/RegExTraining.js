@@ -19,4 +19,15 @@ let fccRegex = /chris/i; // Change this line
 let result3 = fccRegex.test(myString3);
 console.log("Wurde Chris gefunden? :" + result3);  // Chris wird gefunden aber die schreibweise ignoriert mit dem i Schlüsselwort
 
+// Das gefundene Extrhieren
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/i; // Change this line
+let result4 = extractStr.match(codingRegex); // Change this line
+console.log(result4);
+
+// Mehr als den ersten Match finden
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/ig; // suche nach Twinkel und ignoriere die Schreibweise und g steht für global
+let result5 = twinkleStar.match(starRegex); // Change this line
+console.log(result5);
 
