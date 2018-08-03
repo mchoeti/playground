@@ -31,3 +31,11 @@ let starRegex = /twinkle/ig; // suche nach Twinkel und ignoriere die Schreibweis
 let result5 = twinkleStar.match(starRegex); // Change this line
 console.log(result5);
 
+
+// Triff Alles mit Wildcards
+let exampleStr = "Let's have fun with regular expressions!";
+let SucheViaRegex = /.un/; // Change this line
+let result6 = SucheViaRegex.test(exampleStr); // Abfrage ob vorhanden 
+let result7 = exampleStr.match(SucheViaRegex); // Speichern der results
+console.log(result6);  // ergibt true
+console.log(result7);  // gibt resultate aus
