@@ -34,8 +34,15 @@ console.log(result5);
 
 // Triff Alles mit Wildcards
 let exampleStr = "Let's have fun with regular expressions!";
-let SucheViaRegex = /.un/; // Change this line
+let SucheViaRegex = /.un/; // Punkt steht für die Wildcard. beispiel ha.e würde nach ha*e suchen 
 let result6 = SucheViaRegex.test(exampleStr); // Abfrage ob vorhanden 
-let result7 = exampleStr.match(SucheViaRegex); // Speichern der results
+let result7 = exampleStr.match(SucheViaRegex); // Speichern der results für Ausgabe 
 console.log(result6);  // ergibt true
 console.log(result7);  // gibt resultate aus
+
+// Finde alle Vokale
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/ig; // Finde alle Buchstaben a,e,i,o,u ignoriere Groß/Kleinschreibung und suche sie global
+let result8 = quoteSample.match(vowelRegex); // Suche die vokale ob sie passen (match) in der Variablen quoteSample
+console.log(result8);
+
