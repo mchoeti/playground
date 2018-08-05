@@ -46,3 +46,14 @@ let vowelRegex = /[aeiou]/ig; // Finde alle Buchstaben a,e,i,o,u ignoriere Groß
 let result8 = quoteSample.match(vowelRegex); // Suche die vokale ob sie passen (match) in der Variablen quoteSample
 console.log(result8);
 
+// Alle Buchstaben des Alpabeths
+let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/ig; // Change this line
+let result9 = quoteSample1.match(alphabetRegex); // Change this line
+console.log(result9);
+
+// Buchstaben und Nummern
+let quoteSample2 = "Blueberry 3.141592653s are delicious.";
+let myRegexCh1 = /[h-s2-6]/ig; // Change this line
+let result10 = quoteSample2.match(myRegexCh1); // Change this line
+console.log(result10);
