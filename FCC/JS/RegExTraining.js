@@ -57,3 +57,5 @@ let quoteSample2 = "Blueberry 3.141592653s are delicious.";
 let myRegexCh1 = /[h-s2-6]/ig; // Change this line
 let result10 = quoteSample2.match(myRegexCh1); // Change this line
 console.log(result10);
+
+// have a wonderful evening :-)
