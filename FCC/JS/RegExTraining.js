@@ -58,4 +58,9 @@ let myRegexCh1 = /[h-s2-6]/ig; // Change this line
 let result10 = quoteSample2.match(myRegexCh1); // Change this line
 console.log(result10);
 
-// have a wonderful evening :-)
+// good morning holiday
+// Regex für alle Character erstellen welche nicht Vokale sind, klappt mit invertierung ^
+let quoteSample11 = "3 blind mice.";
+let myRegex11 = /[^aeiou^2-9]/ig; // Change this line
+let result11 = quoteSample11.match(myRegex11); // Change this line
+console.log("Result11 = " + result11);
