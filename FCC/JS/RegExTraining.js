@@ -64,3 +64,15 @@ let quoteSample11 = "3 blind mice.";
 let myRegex11 = /[^aeiou^2-9]/ig; // Change this line
 let result11 = quoteSample11.match(myRegex11); // Change this line
 console.log("Result11 = " + result11);
+
+// Finde s mit einem buchstaben
+let difficultSpelling = "Mississippi";
+let myRegex12 = /s+/gi; // Change this line
+let result12 = difficultSpelling.match(myRegex12);
+console.log(result12);
+
+// Ausgabe von 0 oder mehrmal wie immer mit dem Asterix *
+let chewieQuote13 = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex13 = /A[a]*/g; // Change this line // um die challenge zu bestehen muss man das ignore wegnehmen 
+let result13 = chewieQuote13.match(chewieRegex13);
+console.log(result13);
