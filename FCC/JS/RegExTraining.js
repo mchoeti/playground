@@ -76,3 +76,17 @@ let chewieQuote13 = "Aaaaaaaaaaaaaaaarrrgh!";
 let chewieRegex13 = /A[a]*/g; // Change this line // um die challenge zu bestehen muss man das ignore wegnehmen 
 let result13 = chewieQuote13.match(chewieRegex13);
 console.log(result13);
+
+// Winter is comming und die H1 wird angezeigt
+let text14 = "<h1>Winter is coming</h1>";
+let myRegex14 = /<h1>/; // Change this line
+let result14 = text14.match(myRegex14);
+console.log(result14);
+
+// Suchen wir mal nach allen CS in dem String
+let crowd15 = 'P1P2P3P4P5P6CCCP7P8P9';
+let reCriminals15 = /C+[c+]*/g; // Change this line
+let matchedCriminals15 = crowd15.match(reCriminals15);
+console.log(matchedCriminals15);
+// Die Länge des Strings in einem Array, wenn man die Position kennt :-) und das ist eben hier Position 0
+console.log("Es sind: " + matchedCriminals15[0].length + " Verbrecher, auf gehts");
