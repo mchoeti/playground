@@ -9,7 +9,7 @@ FreeCodeCamp
  1. Frontend Development
  2. Java Script
  3. Fertige Samples
- 4. Übungen mit RegEx also regular expressions siehe [Regular Expressions](https://bit.ly/2aMh4r4)
+ 4. Übungen mit  [Regular Expressions](https://bit.ly/2aMh4r4) auch als RegEx bekannt
 
 Webseiten mit Mappen
 -----------------
