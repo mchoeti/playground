@@ -90,3 +90,8 @@ let matchedCriminals15 = crowd15.match(reCriminals15);
 console.log(matchedCriminals15);
 // Die Länge des Strings in einem Array, wenn man die Position kennt :-) und das ist eben hier Position 0
 console.log("Es sind: " + matchedCriminals15[0].length + " Verbrecher, auf gehts");
+
+let rickyAndCal16 = "Cal and Ricky both like racing.";
+let calRegex16 = /^Cal/g; // Wir suchen jetzt mal nach Cal
+let result16 = calRegex16.test(rickyAndCal16);
+console.log(result16); // damit wird true zurückgegeb en 
