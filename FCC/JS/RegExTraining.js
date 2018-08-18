@@ -91,7 +91,14 @@ console.log(matchedCriminals15);
 // Die Länge des Strings in einem Array, wenn man die Position kennt :-) und das ist eben hier Position 0
 console.log("Es sind: " + matchedCriminals15[0].length + " Verbrecher, auf gehts");
 
+// für den Start wäre eben ^ der Carret Charakter
 let rickyAndCal16 = "Cal and Ricky both like racing.";
 let calRegex16 = /^Cal/g; // Wir suchen jetzt mal nach Cal
 let result16 = calRegex16.test(rickyAndCal16);
 console.log(result16); // damit wird true zurückgegeb en 
+
+// Für Start und Ende, ^ ist für den Start und Dollar $ für das Ende
+let caboose17 = "The last car on a train is the caboose";
+let lastRegex17 = /caboose$/; // Change this line
+let result17 = lastRegex17.test(caboose17);
+console.log(result17);
