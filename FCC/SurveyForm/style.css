@@ -57,6 +57,7 @@ header {
 }
 */
 
+/* Style für das User Rating Klasse userRatings */
 .userRatings,
 input[type="checkbox"] {
   float: left;

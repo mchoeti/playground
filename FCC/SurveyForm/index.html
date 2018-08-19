@@ -62,16 +62,21 @@
                         </select>
                     </div>
                 </div>
-                <!-- Radio Buttons einfügeb  -->
+                <!-- Radio Buttons einfügen  -->
+                <!-- Style definiert durch .userRatings in CSS -->
                 <div class="rowTab">
-                    <div class="radio">Bist du GAK FAN</div>
-                    <label>JA:
-                        <input value="1" name="radio-buttons" type="radio">
-                    </label>
-                    <label>Nein:
-                        <input value="2" name="radio-buttons" type="radio">
-                    </label>
-                </div>
+                        <div class="labels">
+                          <label for="userRating">* Bist du GAK FAN?</label>
+                        </div>
+                        <div class="rightTab">
+                          <ul style="list-style: none;">
+                            <li class="radio"><label>JA<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+                            <li class="radio"><label>NEIN<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+                            <li class="radio"><label>Nicht sicher<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+                          </ul>
+                        </div>
+                      </div>
+
                 <!-- Sektion für die Checkboxen -->
                 <div class="rowTab">
                     <div class="labels">
