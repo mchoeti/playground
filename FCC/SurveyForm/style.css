@@ -28,3 +28,103 @@ header {
   width: 48%;
   vertical-align: middle;
 }
+
+/* Defintion des Umfrage Rahmens , hier form-outer */
+#form-outer {
+  background-color: rgb(250, 250, 250);
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+/* Style für die Input Felder */
+.input-field {
+  height: 25px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+
+/* Style für das Alter noch unklar 
+#userAge {
+  width: 400px;
+}
+*/
+
+.userRatings,
+input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+
+
+/* Style für die Checkboxen */
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+/* Style für die Radio & CheckBoxen */
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* Style für den Submit Button */
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 130px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+ul {
+  list-style:  none;
+} 
+
+
+
+/* Die @Media Dinger nochmals genauer ansehen  */
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+/* Die @Media Dinger nochmals genauer ansehen  */
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .rightTab {
+    width: 80%;
+    float: left;
+  }
+  .input-field {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}

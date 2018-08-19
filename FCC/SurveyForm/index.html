@@ -16,7 +16,11 @@
     </header>
 
     <body>
+<!-- Defintion des Umfrage Rahmens -->
+<div id="form-outer">
+
         <div id="main" class="wrapper">
+            <!-- Beginn der Form -->
             <form id="survey-form">
                 <div class="rowTab">
                     <div class="labels">
@@ -42,7 +46,7 @@
                         <input type="number" name="age" id="number" min="1" max="100" class="input-field" required placeholder="Wie alt bist du">
                     </div>
                 </div>
-
+                <!-- Drop Bown Menü einbauen -->
                 <div class="rowTab">
                     <div class="labels">
                         <label id="number-label" for="age">Beruf </label>
@@ -58,7 +62,7 @@
                         </select>
                     </div>
                 </div>
-
+                <!-- Radio Buttons einfügeb  -->
                 <div class="rowTab">
                     <div class="radio">Bist du GAK FAN</div>
                     <label>JA:
@@ -67,15 +71,52 @@
                     <label>Nein:
                         <input value="2" name="radio-buttons" type="radio">
                     </label>
-
-
-
                 </div>
+                <!-- Sektion für die Checkboxen -->
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="preferences">Was müssen wir verbessern?
+                            <br>(Anklicken was relevant ist): </label>
+                    </div>
+                    <ul id="preferenced">
+                        <li>
+                            <label>
+                                <input name="prefer" value="1" type="checkbox" class="userRatings">Abwehr</label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="prefer" value="2" type="checkbox" class="userRatings">Mittelfeld
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="prefer" value="3" type="checkbox">Sturm
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="prefer" value="4" type="checkbox">Das Umfeld
+                            </label>
+                        </li>
 
+                    </ul>
+                </div>
+                <!-- Comment Feld für zusätzliche Kommentare -->
+                <div class="rowTab">
+                    <div class="labels">
+                        <label for="comments">Hast du noch Verbesserungstips?</label>
+                    </div>
+                    <div class="rightTab">
+                        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Deinen Input bitte hier"></textarea>
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <button id="submit" type="submit">Schicks ab !!!</button>
             </form>
-
+            <!-- Ende der Form -->
         </div>
-
+<!-- Ende der Umrandung der Umfrage -->
+    </div>
         <div id="tribute-links">
             <h3>Weiterführende Links</h3>
             <h4>
