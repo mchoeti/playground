@@ -102,3 +102,12 @@ let caboose17 = "The last car on a train is the caboose";
 let lastRegex17 = /caboose$/; // Change this line
 let result17 = lastRegex17.test(caboose17);
 console.log(result17);
+
+// Finde alle Alpahbet buchstaben, w steht demnach für a-z und 0-9 
+let quoteSample18 = "The five boxing wizards jump quickly.";
+let alphabetRegexV218 = /\w/g; // alle buchstaben 
+let zähleWörter = /\w+/g; // zähle die Wörter
+let result18 = quoteSample18.match(alphabetRegexV218).length;
+let result19 = quoteSample18.match(zähleWörter).length;
+console.log("Es sind derzeit: " + result18 + " Buchstaben ");
+console.log("Es sind derzeit: " + result19 + " Wörter ");
