@@ -10,118 +10,131 @@
         <!-- JS Script -->
         <script src="script.js"></script>
         <div class="landing-text">
-            <h1 id="title">Welchen Platz belegt der GAK in der RLM 18/19? </h1>
+            <h1 id="title">Welchen Platz belegt
+                <br /> GAK
+                <br /> in der RLM 18/19?</h1>
             <p id="description">Irgendwer muss ja mal fragen</p>
         </div>
     </header>
 
     <body>
-<!-- Defintion des Umfrage Rahmens -->
-<div id="form-outer">
+        <!-- Defintion des Umfrage Rahmens -->
+        <div id="form-outer">
 
-        <div id="main" class="wrapper">
-            <!-- Beginn der Form -->
-            <form id="survey-form">
-                <div class="rowTab">
-                    <div class="labels">
-                        <label id="name-label" for="name">* Name: </label>
-                    </div>
-                    <div class="rightTab">
-                        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Wie sollen wir dich nennen" required>
-                    </div>
-                </div>
-                <div class="rowTab">
-                    <div class="labels">
-                        <label id="email-label" for="email">* Email: </label>
-                    </div>
-                    <div class="rightTab">
-                        <input type="email" name="email" id="email" class="input-field" required placeholder="Deine Email bitte">
-                    </div>
-                </div>
-                <div class="rowTab">
-                    <div class="labels">
-                        <label id="number-label" for="age">* Alter: </label>
-                    </div>
-                    <div class="rightTab">
-                        <input type="number" name="age" id="number" min="1" max="100" class="input-field" required placeholder="Wie alt bist du">
-                    </div>
-                </div>
-                <!-- Drop Bown Menü einbauen -->
-                <div class="rowTab">
-                    <div class="labels">
-                        <label id="number-label" for="age">Beruf </label>
-                    </div>
-                    <div class="rightTab">
-                        <select id="dropdown" name="currentPos" class="dropdown">
-                            <option disabled value>Select an option</option>
-                            <option value="student">Student</option>
-                            <option value="job">Arbeiter</option>
-                            <option value="learner">Angestellter</option>
-                            <option value="preferNo">Unabhängig</option>
-                            <option value="other">Was anderes</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Radio Buttons einfügen  -->
-                <!-- Style definiert durch .userRatings in CSS -->
-                <div class="rowTab">
+            <div id="main" class="wrapper">
+                <!-- Beginn der Form -->
+                <form id="survey-form">
+                    <div class="rowTab">
                         <div class="labels">
-                          <label for="userRating">* Bist du GAK FAN?</label>
+                            <label id="name-label" for="name">* Name: </label>
                         </div>
                         <div class="rightTab">
-                          <ul style="list-style: none;">
-                            <li class="radio"><label>JA<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
-                            <li class="radio"><label>NEIN<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
-                            <li class="radio"><label>Nicht sicher<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
-                          </ul>
+                            <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Wie sollen wir dich nennen" required>
                         </div>
-                      </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label id="email-label" for="email">* Email: </label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="email" name="email" id="email" class="input-field" required placeholder="Deine Email bitte">
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label id="number-label" for="age">* Alter: </label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="number" name="age" id="number" min="1" max="100" class="input-field" required placeholder="Wie alt bist du">
+                        </div>
+                    </div>
+                    <!-- Drop Bown Menü einbauen -->
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label id="number-label" for="age">Beruf </label>
+                        </div>
+                        <div class="rightTab">
+                            <select id="dropdown" name="currentPos" class="dropdown">
+                                <option disabled value>Select an option</option>
+                                <option value="student">Student</option>
+                                <option value="job">Arbeiter</option>
+                                <option value="learner">Angestellter</option>
+                                <option value="preferNo">Unabhängig</option>
+                                <option value="other">Was anderes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Radio Buttons einfügen  -->
+                    <!-- Style definiert durch .userRatings in CSS -->
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="userRating">* Bist du GAK FAN?</label>
+                        </div>
+                        <div class="rightTab">
+                            <ul style="list-style: none;">
+                                <li class="radio">
+                                    <label>JA
+                                        <input name="radio-buttons" value="1" type="radio" class="userRatings">
+                                    </label>
+                                </li>
+                                <li class="radio">
+                                    <label>NEIN
+                                        <input name="radio-buttons" value="2" type="radio" class="userRatings">
+                                    </label>
+                                </li>
+                                <li class="radio">
+                                    <label>Nicht sicher
+                                        <input name="radio-buttons" value="3" type="radio" class="userRatings">
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <!-- Sektion für die Checkboxen -->
-                <div class="rowTab">
-                    <div class="labels">
-                        <label for="preferences">Was müssen wir verbessern?
-                            <br>(Anklicken was relevant ist): </label>
+                    <!-- Sektion für die Checkboxen -->
+                    <!-- TEST -->
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="preferences">Was müssen wir verbessern?
+                                <br>(Anklicken was relevant ist): </label>
+                        </div>
+                        <div class="rightTab">
+                            <ul id="preferences" style="list-style: none;">
+                                <li class="checkbox">
+                                    <label>
+                                        <input name="prefer" value="1" type="checkbox" class="userRatings">Abwehr</label>
+                                </li>
+                                <li class="checkbox">
+                                    <input name="prefer" value="2" type="checkbox" class="userRatings">Mittelfeld</li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input name="prefer" value="3" type="checkbox" class="userRatings">Sturm</label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input name="prefer" value="4" type="checkbox" class="userRatings">Das Drumherum</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul id="preferenced">
-                        <li>
-                            <label>
-                                <input name="prefer" value="1" type="checkbox" class="userRatings">Abwehr</label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="prefer" value="2" type="checkbox" class="userRatings">Mittelfeld
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="prefer" value="3" type="checkbox">Sturm
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="prefer" value="4" type="checkbox">Das Umfeld
-                            </label>
-                        </li>
+                    <!-- TEST Ende -->
 
-                    </ul>
-                </div>
-                <!-- Comment Feld für zusätzliche Kommentare -->
-                <div class="rowTab">
-                    <div class="labels">
-                        <label for="comments">Hast du noch Verbesserungstips?</label>
+                    <!-- Comment Feld für zusätzliche Kommentare -->
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="comments">Hast du noch Verbesserungstips?</label>
+                        </div>
+                        <div class="rightTab">
+                            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Deinen Input bitte hier"></textarea>
+                        </div>
                     </div>
-                    <div class="rightTab">
-                        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Deinen Input bitte hier"></textarea>
-                    </div>
-                </div>
-                <!-- Submit Button -->
-                <button id="submit" type="submit">Schicks ab !!!</button>
-            </form>
-            <!-- Ende der Form -->
+                    <!-- Submit Button -->
+                    <button id="submit" type="submit">Schicks ab !!!</button>
+                </form>
+                <!-- Ende der Form -->
+            </div>
+            <!-- Ende der Umrandung der Umfrage -->
         </div>
-<!-- Ende der Umrandung der Umfrage -->
-    </div>
         <div id="tribute-links">
             <h3>Weiterführende Links</h3>
             <h4>
@@ -131,7 +144,7 @@
 
         <!-- Simple Footer -->
         <footer>
-            <p>&copy Mchoeti 2018 / Tribute Challenge</p>
+            <p>&copy Mchoeti 2018 / Survey Form</p>
         </footer>
     </body>
 </div>

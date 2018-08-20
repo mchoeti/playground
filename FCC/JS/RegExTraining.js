@@ -111,3 +111,12 @@ let result18 = quoteSample18.match(alphabetRegexV218).length;
 let result19 = quoteSample18.match(zähleWörter).length;
 console.log("Es sind derzeit: " + result18 + " Buchstaben ");
 console.log("Es sind derzeit: " + result19 + " Wörter ");
+
+// Zählen von Wörtern und Strings
+let quoteSample20 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex20 = /\w/g; // mit w finde ich die buchstaben
+let nonAlphabetRegex21 = /\W/g; // ein uper W gibt mir die Anzahl der Wörter zurück
+let result20 = quoteSample20.match(nonAlphabetRegex20).length;
+let result21 = quoteSample20.match(nonAlphabetRegex21).length;
+console.log("Es sind derzeit: " + result20 + " Buchstaben ");
+console.log("Es sind derzeit: " + result21 + " Wörter ");

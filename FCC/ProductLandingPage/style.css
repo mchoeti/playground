@@ -1,0 +1,13 @@
+
+
+
+/* Footer Standard Template */
+footer {
+    height: 50px;
+    margin-top: 4rem;
+    padding:1.2rem;
+    background: #547480;
+    color:#fff;
+    font-size: .9rem;
+    text-align: center;
+  }
