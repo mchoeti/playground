@@ -120,3 +120,15 @@ let result20 = quoteSample20.match(nonAlphabetRegex20).length;
 let result21 = quoteSample20.match(nonAlphabetRegex21).length;
 console.log("Es sind derzeit: " + result20 + " Buchstaben ");
 console.log("Es sind derzeit: " + result21 + " Wörter ");
+
+// Finde alle Zahlen mit d steht für digit
+let numString22 = "Your sandwich will be $5.00";
+let numRegex22 = /\d/g; // Change this line
+let result22 = numString22.match(numRegex22).length;
+console.log("Es gibt: " + result22 + " Ziffern");
+
+// Finden aller Buchstaben
+let numString23 = "Your sandwich will be $5.00";
+let noNumRegex23 = /\D/g; // Change this line
+let result23 = numString23.match(noNumRegex23).length;
+console.log("Es gibt: " + result23+ " Wörter");
