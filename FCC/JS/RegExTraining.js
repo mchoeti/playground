@@ -132,3 +132,10 @@ let numString23 = "Your sandwich will be $5.00";
 let noNumRegex23 = /\D/g; // Change this line
 let result23 = numString23.match(noNumRegex23).length;
 console.log("Es gibt: " + result23+ " Wörter");
+
+
+// Finde alle Whitespaces, also Leerzeichen
+let sample24 = "Whitespace is important in separating words";
+let countWhiteSpace24 = /\s/g; // \s steht für Spaces
+let result24 = sample24.match(countWhiteSpace24);
+console.log("Aha es gibt also: " + result24.length + " Leerzeichen im Text"); // Aha es gibt also 5 Leerzeichen..  Juhu..
