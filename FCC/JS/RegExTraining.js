@@ -139,3 +139,9 @@ let sample24 = "Whitespace is important in separating words";
 let countWhiteSpace24 = /\s/g; // \s steht für Spaces
 let result24 = sample24.match(countWhiteSpace24);
 console.log("Aha es gibt also: " + result24.length + " Leerzeichen im Text"); // Aha es gibt also 5 Leerzeichen..  Juhu..
+
+// jetzt zählen wir mal alle außer den LEERzeihen 
+let sample25 = "Whitespace is important in separating words";
+let countNonWhiteSpace25 = /\S/g; // also für alle NICHT Spaces 
+let result25 = sample25.match(countNonWhiteSpace25);
+console.log("Aha es gibt also: " + result25.length + " Buchstaben (ohne Leerzeichen im Text)")
