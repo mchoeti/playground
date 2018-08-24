@@ -145,3 +145,9 @@ let sample25 = "Whitespace is important in separating words";
 let countNonWhiteSpace25 = /\S/g; // also für alle NICHT Spaces 
 let result25 = sample25.match(countNonWhiteSpace25);
 console.log("Aha es gibt also: " + result25.length + " Buchstaben (ohne Leerzeichen im Text)")
+
+// 
+let ohStr26 = "Ohhh no";
+let ohRegex26 = /Oh{3,6} no/; // es dürfen 3-6 h vorkommen 
+let result26 = ohRegex26.test(ohStr26);
+console.log(result26);
