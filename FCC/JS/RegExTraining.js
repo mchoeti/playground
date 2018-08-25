@@ -151,3 +151,15 @@ let ohStr26 = "Ohhh no";
 let ohRegex26 = /Oh{3,6} no/; // es dürfen 3-6 h vorkommen 
 let result26 = ohRegex26.test(ohStr26);
 console.log(result26);
+
+// Abkürzungen und voller REGEX
+// Suchen nach Beispielsweise [A-Za-z0-9_] kann man auch indem man \w verwendet
+// Das Gegenteil davon wäre 
+// Großes W wäre der Shortcut und ist das seleb wie  [^A-Za-z0-9_].
+let quoteSample27 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex27 = /\W/g; // Suche nach non Alpabetic Numbers
+let nonAlphabetRegex28 = /\w/g; // Suche nach non Alpabetic Numbers
+let result27 = quoteSample27.match(nonAlphabetRegex27).length;
+let result28 = quoteSample27.match(nonAlphabetRegex28).length;
+console.log("Wir finden damit " + result27 + " Non Alphabetic Nummers");
+console.log("Wir finden damit " + result28 + " Alphabet Nummersn a-z und 0-9");
