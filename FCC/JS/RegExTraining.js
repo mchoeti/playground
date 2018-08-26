@@ -163,3 +163,22 @@ let result27 = quoteSample27.match(nonAlphabetRegex27).length;
 let result28 = quoteSample27.match(nonAlphabetRegex28).length;
 console.log("Wir finden damit " + result27 + " Non Alphabetic Nummers");
 console.log("Wir finden damit " + result28 + " Alphabet Nummersn a-z und 0-9");
+
+// Caret Character verwenden
+let rickyAndCal29 = "Cal and Ricky both like racing.";
+let calRegex29 = /^Cal/; // Caret verwenden ^
+let calRegex30 = /ing.$/; // Findet das letzt Wort im String mit dem $ Zeichen
+let result29 = calRegex29.test(rickyAndCal29);
+let result30 = calRegex30.test(rickyAndCal29);
+console.log(result29);
+console.log(result30);
+
+// Wenn ich alle Nummern möchte, wird mir \d/g gesucht, dabei steht d für dezimal und g für global
+// Der Umkehrwert daszu ist natürlich der invertierte Wert hier also ein großes D 
+// Hier finden wir einiges
+let haStr31 = "Hazzzzah";
+let haRegex31 = /Haz{4,}ah/; // Hier von 4, bis unendliche Zeichen
+// will man nur eine bestimmte Anzahl rausfiltern wäre das wie folgt. : {Anzahl}
+// let haRegex31 = /Haz{4}ah/; 
+let result31 = haRegex31.test(haStr31);
+console.log(result31);
