@@ -182,3 +182,34 @@ let haRegex31 = /Haz{4,}ah/; // Hier von 4, bis unendliche Zeichen
 // let haRegex31 = /Haz{4}ah/; 
 let result31 = haRegex31.test(haStr31);
 console.log(result31);
+
+// Positive und Negative lookups
+// Positiv (?=...)  und Negativ (?!...)
+// simpler password checker
+let sampleWord32 = "astronaut";
+let pwRegex32 = /(?=\w{5})(?=\D*\d)/; // Change this line
+let result32 = pwRegex32.test(sampleWord32);
+console.log(result32);
+
+// ^ for start of the string and $ for end of the string. 
+// /^(\d+)\s\1\s\1$/;
+
+// Search and Replace mal simple
+let huhText33 = "This sandwich is good.";
+let fixRegex33 = /good/; // Change this line
+let replaceText33 = "sometimes not mine"; // Change this line
+let result33 = huhText33.replace(fixRegex33, replaceText33);
+console.log("Der Neue Text ist: " +  result33);
+
+// Search and Replace mal simple
+let huhText34 = "This sandwich is good.";
+let fixRegex34 = /good/; // Change this line
+let replaceText34 = "sometimes not mine"; // Change this line
+let result34 = huhText34.replace(fixRegex34, replaceText34);
+console.log("Der Neue Text ist: " +  result34);
+
+// Es soll nur Hello World angezeigt werden, also ohne Leerzeichen
+let hello35 = "   Hello, World!  ";
+let wsRegex35 = /\S.*\S/; // Change this line
+let result35 = hello35.match(wsRegex35);
+console.log(hello35);
