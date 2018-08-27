@@ -2,7 +2,7 @@
 
 
 /* Footer Standard Template */
-footer {
+/* footer {
     height: 50px;
     margin-top: 4rem;
     padding:1.2rem;
@@ -10,4 +10,35 @@ footer {
     color:#fff;
     font-size: .9rem;
     text-align: center;
+
+    span {
+      margin-top: 5px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.9em;
+      color: #444;
+    }
+  } */
+
+  footer {
+  margin-top: 30px;
+  background-color: #547480;
+  padding: 20px;
+  color: #fff;
+  
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    
+    li {
+      padding: 0 10px;
+    }
   }
+  span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    /* font-size: 0.9em; */
+    /* color: #444; */
+  }
+}
