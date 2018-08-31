@@ -1,3 +1,13 @@
+
+/* Header image setting, because media is not wirking */
+#header-img {
+  width: 30%;
+  height: 30%;
+  
+}
+
+/** global element styling **/
+
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 /* In gerneral all should have this font */
@@ -68,7 +78,7 @@ header {
 }
 
 /* Setzen des Logos, also das Bild */
-.logo {
+/* .logo {
   width: 60vw;
   
   @media (max-width: 650px) {
@@ -80,6 +90,7 @@ header {
   img {
     width: 100%;
     height: 100%;
+    /* es ist der Wert der die Logo größe 'ndern sollte. */
     max-width: 300px;
     display: flex;
     justify-content: center;
@@ -90,7 +101,7 @@ header {
       margin: 0 auto;
     }
   }
-}
+} */
 
 /* noch unklar */
 nav {

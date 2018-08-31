@@ -1,0 +1,63 @@
+/* Zuerst mal die Container Klasse setzen */
+
+/* Simples SmartPhone Setup mit Media Queries */
+@media(min-width:1000px) {
+    /* und jetzt hier die Container reinbauen wird erst dann aktiv wenn wir unter der definierten breite sind*/
+    .container1 {
+        /* Die Boxen werden damit waagerecht ausgerichtet */
+       display: flex;
+       /*  */
+       align-items: flex-top;
+       /* Damit gehen die boxen nach unten */
+       /* flex-direction: column */
+       color: blue;
+    }
+    
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.container2_box {
+    /* width:  25%; */
+    flex-basis: 25%;
+}
+
+.container3_box {
+    /* width:  25%; */
+    flex-basis: 10%;
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Alle Klassen uns Elemente */
+.container1 div, .container2 div, .container3 div{
+    border: 1px #ccc solid;
+    padding: 10px;
+}
+
+.box1 {
+    flex:  2;
+    order:  2;
+}
+
+.box2 {
+    flex:  1;
+    order: 1;
+}
+
+.box3 {
+    flex:  2;
+    order: 3;
+}
+
+.container2_box {
+    width: 30%;
+}
+
