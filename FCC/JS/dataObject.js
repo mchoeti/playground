@@ -11,3 +11,16 @@ function mixedNumbers(arr) {
   // Unshift , den Werten hier und Push
   console.log(mixedNumbers(['IV', 5, 'six']));
   // Das Resultat in der Console sind demnach die Zahlen 1-9 dargestellt durch die entsprechenden Ziffern und Strings
+
+
+
+  // Entfernen von Elementen aus dem Array
+  // pop() entfernt das letzte Element des Arrays und gibt es zurück
+  // shift entfernt das erste Element des Arrays und gibt es zurück
+  function popShift(arr) {
+  let popped = arr.pop(); // gibt complete zurück( Letzes Element im Array)
+  let shifted = arr.shift(); // gibt challenge zurück ( 1. Element im Array)
+  return [shifted, popped];
+}
+// Das soll angepasst werden
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
