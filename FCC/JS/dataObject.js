@@ -39,3 +39,25 @@ function sumOfTen(arr) {
 // Ausgabe der Summe der mit splice() reduzierten Elemente des Arrays
 console.log("Die Summer wäre: " + sumOfTen([2, 5, "entfern", "mich", 2, 1]));
 
+
+function htmlColorNames(arr1) {
+  // Wir wollen die ersten beiden Elemente entfernen und dann sollen 'DarkSalmon' and 'BlanchedAlmond ihre Plätze einnehmen.
+  // Entfernen klappt wie immer mit Startpunkt angeben und die Anzahl der Elemente
+  // Danach müssen die neuen Werte hinzugefügt werden
+  arr1.splice(0,2, 'DarkSalmon', 'BlanchedAlmond') ;
+  return arr1;
+} 
+ 
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
+
+// SLICE Methode slice() Syntax wie folgt: arr.slice([begin[, end]])
+function forecast(arr2) {
+  // Schneidet das Array on Position 3 bis zum Ende aus und speichert es in einer neuen Variablen
+  // Beginnt bei Position 2 und endet bei Position 4 OHNE Position 4 mitzunehmen
+  // Null-basierter Index bevor die Extraktion endet. slice extrahiert bis zu, aber nicht inklusive end.
+  let sliced = arr2.slice(2, 4);
+  return sliced;
+}
+
+// do not change code below this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
