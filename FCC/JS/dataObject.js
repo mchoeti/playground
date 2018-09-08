@@ -59,5 +59,34 @@ function forecast(arr2) {
   return sliced;
 }
 
-// do not change code below this line
+// Console Log mit Anfangswerten
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+// Copy mit SLice 
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Lösung ohne den Spread Operator hier entstehen nur Kopien von dem Originalen
+    //newArr.push(arr);
+    // Lösung mit Spread Operator, Unterschied hier ist eben, dass es ein neues ARRAY ist
+    newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 3));
+
+
+// Kombination eines Arrays mit dem Spread Operator
+function spreadOut() {
+  // in diesem Array stehen also 2 Werte
+  let fragment = ['to', 'code'];
+  // Nun passen wir das Array mit dem zufor definierten fragment
+  let sentence = ['learning', ...fragment, 'is', 'fun']
+  // Rückgabe des vollständigen Satzes
+  return sentence;
+}
+// Ausgabe des Satzes mittels der Funktion
+console.log(spreadOut());
