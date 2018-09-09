@@ -90,3 +90,31 @@ function spreadOut() {
 }
 // Ausgabe des Satzes mittels der Funktion
 console.log(spreadOut());
+
+
+
+// Überprüfung ob es einen bestimmten String im Element gibt
+// dazu benutzen wir indexOf() 
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+// Gibt aus an welcher Stelle der gesuchte Begriff im Array steht
+console.log(fruits.indexOf('peaches')); // hier sollte als Egebnis 3 rauskommen, 
+
+
+// schau mal nach ob was bestimmtes in einem Array ist
+function quickCheck(arr, elem) {
+  // nur für die Console
+  console.log(arr.indexOf(elem) === -1 ? false : true);
+  // Soll der Wert zurückgegeben werden, return nicht vergessen
+  //return arr.indexOf(elem) === -1 ? false : true;
+
+  // Längere Variante, also eine Klassiche If/ Else abfrage
+  if (arr.indexOf(elem)=== -1 )  {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+// Anbei die "Eingabe und Ausgabe via Console log"
+console.log("Schneller Check für True order False: " + quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
