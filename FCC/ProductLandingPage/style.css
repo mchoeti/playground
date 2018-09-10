@@ -1,16 +1,21 @@
 
-/* Header image setting, because media is not wirking */
+/* Header image setting, because media is not working */
 #header-img {
-  width: 30%;
-  height: 30%;
-  
+  width: 50%;
+  height: 50%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/** global element styling **/
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: lightblue;
+  }
+}
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
-
-/* In gerneral all should have this font */
+/* In general all should have this font */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +29,7 @@ body {
 }
 
 #page-wrapper {
-  position: relative;
+  position: flex  ;
 }
 
 li {
@@ -36,8 +41,6 @@ a {
   text-decoration: none;
 }
 
-/* Globales Styling */
-/* Damit fixieren Klasse Container Containers im div element*/
 .container {
   max-width: 1000px;
   width: 100%;
@@ -53,9 +56,12 @@ a {
   text-transform: uppercase;
   border: 3px black solid;
   border-radius: 2px;
-  background: transparent;
   cursor: pointer;
 }
+.btn:hover {
+  color: yellow;
+}
+
 
 /* Damit machen wir die Klasse Grid Flexibel */
 .grid {
@@ -77,115 +83,18 @@ header {
   }
 }
 
-/* Setzen des Logos, also das Bild */
-/* .logo {
-  width: 60vw;
-  
-  @media (max-width: 650px) {
-    margin-top: 15px;
-    width: 100%;
-    position: relative;
-  }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    /* es ist der Wert der die Logo größe 'ndern sollte. */
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 20px;
-    @media (max-width: 650px) {
-      margin: 0 auto;
-    }
-  }
-} */
-
-/* noch unklar */
-nav {
-  font-weight: 400;
-  
-  @media (max-width: 650px) {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 50px;
-    
-    li {
-     padding-bottom: 5px; 
-    }
-  }
-  
-  ul {
-    width: 35vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
-  }
-}
-
-
-#hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 200px;
-  margin-top: 50px;
-  h2 {
-    margin-bottom: 20px;
-    word-wrap: break-word;
-  }
-
-  input[type="email"] {
-    max-width: 275px;
-    width: 100%;
-    padding: 5px;
-  }
-
-  input[type="submit"] {
-    max-width: 150px;
-    width: 100%;
-    height: 30px;
-    margin: 15px 0;
-    border: 0;
-    background-color: #f1c40f;
-    
-    &:hover {
-      background-color: orange;
-      transition: background-color 1s;
-    }
-  }
-  
-  @media (max-width: 650px) {
-    margin-top: 120px;
-  }
-}
-
-
 #features {
   margin-top: 30px;
+
   .icon {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 125px;
     width: 20vw;
     color: darkorange;
 
-    @media (max-width: 550px) {
-      display: none;
-    }
   }
 
   .desc {
@@ -225,7 +134,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+}
 
   #basic, #standard, #premium {
     display: flex;
@@ -252,50 +161,52 @@ nav {
     
     ol {
       margin: 15px 0;
-      
       li { padding: 5px 0; }
     }
-    
-    button {
-      border: 0;
-      margin: 15px 0;
-      background-color: #f1c40f;
-      font-weight: 400;
-      
-      &:hover {
-        background-color: orange;
-        transition: background-color 1s;
-      }
-    }
+
   }
-  
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
     flex-direction: column;
     
     #basic, #standard, #premium { max-width: 300px; width: 100%; margin: 0 auto; margin-bottom: 10px; }
-  }
+  } */
 }
 
+// hero
 
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+  h2 {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
 
-/* Footer Standard Template */
-/* footer {
-    height: 50px;
-    margin-top: 4rem;
-    padding:1.2rem;
-    background: #547480;
-    color:#fff;
-    font-size: .9rem;
-    text-align: center;
+  input[type="email"] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+  }
 
-    span {
-      margin-top: 5px;
-      display: flex;
-      justify-content: flex-end;
-      font-size: 0.9em;
-      color: #444;
+  input[type="submit"] {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
+    
+    &:hover {
+      background-color: orange;
+      transition: background-color 1s;
     }
-  } */
+  }
+
 
   footer {
     margin-top: 30px;
@@ -315,7 +226,5 @@ nav {
       margin-top: 5px;
       display: flex;
       justify-content: flex-end;
-      /* font-size: 0.9em; */
-      /* color: #444; */
     }
   }
