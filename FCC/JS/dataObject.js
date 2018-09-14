@@ -119,7 +119,6 @@ function quickCheck(arr, elem) {
 console.log("Schneller Check für True order False: " + quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 
-
 function filteredArray(arr, elem) {
   let newArr = [];
   // change code below this line
@@ -135,3 +134,12 @@ function filteredArray(arr, elem) {
 
 // change code here to test different cases:
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// mal was mit Objekten
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " +  this.numLegs + " legs.";}
+};
+// Ausgabe des Satzes mit Verwendung des this Keywords
+console.log(dog.sayLegs());
