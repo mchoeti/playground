@@ -143,3 +143,15 @@ let dog = {
 };
 // Ausgabe des Satzes mit Verwendung des this Keywords
 console.log(dog.sayLegs());
+
+
+
+// ERstellen von neuen komplexen Multidimensionalen Arrays simple aber effektiv
+let myNestedArray = [ // first level
+  ['level2'],  // level 2 Array in an Array
+  [['deep']],  // level 3 
+  [[['deeper']]], // level 4
+  [[[['deepest', 'level5']]]], // level 5
+];
+
+console.log(myNestedArray[0])
