@@ -146,7 +146,7 @@ console.log(dog.sayLegs());
 
 
 
-// Erstellen von neuen komplexen Multidimensionalen Arrays simple aber effektiv
+//Erstellen von neuen komplexen Multidimensionalen Arrays simple aber effektiv
 let myNestedArray = [ // first level
   ['level2'],  // level 2 Array in an Array
   [['deep']],  // level 3 
