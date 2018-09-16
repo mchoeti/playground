@@ -165,3 +165,57 @@ console.log(myNestedArray[1][0])
 console.log(myNestedArray[2][0][0])
 // und zu guter letzt Level 5
 console.log(myNestedArray[3][0][0][1]);
+
+
+
+// Einem Objekt neue Werte properties und values hinzufügen
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+//  Nun fügen wir neue Properties mit Werten ein
+foods.bananas = 13;
+foods.grapes = 35;
+foods.strawberries = 27;
+// Danach noch die Ausgabe via Console
+
+console.log(foods);
+// ergibt {apples: 25, oranges: 32, plums: 28, bananas: 13, grapes: 35, …}
+
+
+//Ändern der Werte in einem Nested Array
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+// Wert wird auf 45 gesetzt :-)
+userActivity.data.online = 45;
+console.log(userActivity);
+
+
+// Zugreifen auf Werte im Objekt
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+// Erstellen einer Funktion die eine Eigenschaft benötigt. 
+// Diese kann apples , oranges, plumsw..  usw sein, siehe Array 
+function checkInventory(scannedItem) {
+  // Rückgabe des eingegeben Items der Zugriff sieht dann so aus
+  // foods.plums und wird einen Wert, hier 28 zurückgeben
+ return foods[scannedItem];
+}
+
+// Ausgabe des Wertes der Eigenschaft plums 
+console.log(checkInventory("plums")); 
+
