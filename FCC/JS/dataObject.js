@@ -219,3 +219,4 @@ function checkInventory(scannedItem) {
 // Ausgabe des Wertes der Eigenschaft plums 
 console.log(checkInventory("plums")); 
 
+// Monday Morning Commit, Testing for new laptop settings
