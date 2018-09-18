@@ -200,7 +200,7 @@ console.log(userActivity);
 
 
 // Zugreifen auf Werte im Objekt
-let foods = {
+let foods1 = {
   apples: 25,
   oranges: 32,
   plums: 28,
@@ -213,7 +213,7 @@ let foods = {
 function checkInventory(scannedItem) {
   // Rückgabe des eingegeben Items der Zugriff sieht dann so aus
   // foods.plums und wird einen Wert, hier 28 zurückgeben
- return foods[scannedItem];
+ return foods1[scannedItem];
 }
 
 // Ausgabe des Wertes der Eigenschaft plums 
