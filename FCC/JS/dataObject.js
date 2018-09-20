@@ -220,3 +220,37 @@ function checkInventory(scannedItem) {
 console.log(checkInventory("plums")); 
 
 // Monday Morning Commit, Testing for new laptop settings
+
+
+// LÖschen von Elementen in einem Array
+// im wesentlichen benutzt man einfach das Delete keyword und danach die Eigenschaft im Array.
+let foods2 = {
+  apples: 48,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Löschen der Eigenschaften inklusive der Werte mit delte Arrayname.eigenschafztz 
+delete foods2.oranges;
+delete foods2.plums;
+delete foods2.strawberries;
+// change code above this line
+
+console.log(foods2);
+
+let vereine = {
+  GAK: 1,
+  AustriaSalzburg: 2,
+  Sturm: 3
+};
+
+// Nun löschen wir den Stadtverein mit einem einfachen 
+delete vereine.Sturm;
+
+// Ausgabe der richtigen Vereine
+console.log(vereine);
+
+
