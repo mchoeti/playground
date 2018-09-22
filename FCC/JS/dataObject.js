@@ -253,4 +253,55 @@ delete vereine.Sturm;
 // Ausgabe der richtigen Vereine
 console.log(vereine);
 
+// ------------------------------###------------------------
+// Loop and LOG the ARRAY
+// DEfinition eines Users
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: false
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
 
+for (let user in users) {
+  console.log(user);
+};
+// Man könnte auch die EIgetnschaften von Sarah rausholen
+for (let info in users.Sarah) {
+  console.log("Sarah is :" + info);
+};
+
+// Jetzt zählen wir mal den Status wie viele online sind
+function countOnline(obj) {
+  // Definieren eine variablen
+  let anzahlOnline = 0;
+  // wir suchen in uers die Eigenschaft
+  for(let user in obj)
+  {
+    // Abfragem wenn der Status false ist bei true könnten wir das weglassen
+    if (obj[user].online === false)
+    { 
+      // wenn true dann um eins erhöhen.
+      anzahlOnline++;
+    } 
+    // ausgeben des Types von users
+    // console.log(typeof user);
+  }
+  return anzahlOnline;
+  // change code above this line
+}
+console.log("Anzahl der Online Personen: " + countOnline(users));
+
+// ------------------------------###------------------------
