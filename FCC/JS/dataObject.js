@@ -255,7 +255,7 @@ console.log(vereine);
 
 // ------------------------------###------------------------
 // Loop and LOG the ARRAY
-// DEfinition eines Users
+// Definition eines Users
 let users = {
   Alan: {
     age: 27,
@@ -278,7 +278,7 @@ let users = {
 for (let user in users) {
   console.log(user);
 };
-// Man könnte auch die EIgetnschaften von Sarah rausholen
+// Man könnte auch die Eigenschaften von Sarah rausholen
 for (let info in users.Sarah) {
   console.log("Sarah is :" + info);
 };
@@ -305,3 +305,68 @@ function countOnline(obj) {
 console.log("Anzahl der Online Personen: " + countOnline(users));
 
 // ------------------------------###------------------------
+
+
+let users4 = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // change code below this line
+  return Object.keys(obj)
+  // change code above this line
+}
+
+// Alle Eigenschaften von users4
+console.log(getArrayOfUsers(users4));
+// Nur die Eigenschaften von Jeff
+console.log(getArrayOfUsers(users4.Jeff));
+
+
+//----------------------###-------------------------
+//Hinzufügen neuer von Freunden in einem Array
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  // Mit Push fügen wir enien neuen Eintrag im Array hinzu
+user.data.friends.push(friend);
+// Ausgeben der Länge um zu sehen ob sich das Array verändert hat
+console.log(user.data.friends.length);
+return user.data.friends
+  // Ende der Funktion
+}
+
+console.log(addFriend(user, 'Pete'));
