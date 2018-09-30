@@ -27,6 +27,21 @@ function frankenSplice2(arr1, arr2, n) {
 console.log("Strings außen: " + frankenSplice2([1, 2], ["a", "b"], 1));
 
 
+
+// Array GRundlagen
+var fruits = ['Apple', 'Banana'];
+console.log(fruits.length);
+
+// Simple Kopie
+var fruitCopy = fruits.slice();
+console.log(fruitCopy.length);
+
+// Hinzufügen von Mango an Position 1 und kein Löschen
+fruitCopy.splice(1,0, "Mango");
+console.log(fruitCopy.length);
+console.log(fruitCopy);
+
+
 // Simple Arrays
 var arr1 = [1, 2, 3];  // arr1
 var arr2 = [4, 5, 6];  // arr2
@@ -37,18 +52,6 @@ arr1.splice(1,0, ...arr2);  // Splice, hinzufügen der Werte im Arr 2 mit dem Re
 console.log("Mit Rest Parameter ... : " + arr1); // ergibt 1, 4, 5, 6, 2, 3
 
 
-// Array GRundlagen
-var fruits = ['Apple', 'Banana'];
-console.log(fruits.length);
-
-// Simple Kopie
-var fruitCopy = fruits.slice();
-console.log(fruitCopy.length);
-
-// Hinzufügen von Mango an Position 1 und kein löschen
-fruitCopy.splice(1,0, "Mango");
-console.log(fruitCopy.length);
-console.log(fruitCopy);
 
 
 
