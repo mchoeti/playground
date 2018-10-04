@@ -46,9 +46,9 @@ console.log(fruitCopy);
 var arr1 = [1, 2, 3];  // arr1
 var arr2 = [4, 5, 6];  // arr2
 
-// Nutzung des REST parameters ... mit ES6
+// Nutzung des REST beziehungsweise dem Spread Operator ... mit ES6
 //arr1.splice(1,0, arr2[0], arr2[1], arr2[2]);  // Splice, hinzufügen der Werte im Arr 2 in Arr1 an position 1
-arr1.splice(1,0, ...arr2);  // Splice, hinzufügen der Werte im Arr 2 mit dem Rest Parameter
+arr1.splice(1,0, ...arr2);  // Splice, hinzufügen der Werte im Arr 2 mit dem Rest/Spread Parameter
 console.log("Mit Rest Parameter ... : " + arr1); // ergibt 1, 4, 5, 6, 2, 3
 
 
