@@ -1,7 +1,7 @@
-html,
-body {
+html, body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  background: #e0ebe8;
 }
 
 /* No margin no padding */
