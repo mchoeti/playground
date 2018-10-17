@@ -1,7 +1,7 @@
 html, body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  background: #e0ebe8;
+  background: #3f2236;
 }
 
 /* No margin no padding */
@@ -55,34 +55,31 @@ html, body {
     font-weight: normal;
   }
 
-  .project {
+  .project-tile {
     text-decoration: none;
     color: #008080;
     display: inline-block;
     overflow: hidden;
     border: 2px solid lightblue;
     height: 220px;
-    width: 280px;
-    margin: 40px 100px;
+    width: 220px;
+    margin: 33px 33px;
   }
 
   /* Minimize the Pic */
   .project-pic {
-    width: 20%;
-    height: 180px;
+    width: 60%;
+    height: 150px;
     border-bottom: 2px solid lightblue;
-    /* flex-direction: row; */
+    padding: 10px
   }
 
+  h2 {
+    color: yellowgreen;
+  }
   .project-title {
     font-weight: bold;
   }
-
-  .project-tile {
-      
-      justify-content: flex-start 
-  }
-
 
   @media only screen and (max-width: 500px) {
     nav ul {
