@@ -107,7 +107,7 @@ html, body {
   .contact-details {
     display: inline-block;
     font-weight: bold;
-    margin: 0 35px 45px 35px;
+    margin: 25px 35px 45px 35px;
     list-style-type: none;
     border: 2px solid #90C695;
     border-radius: 100%;
