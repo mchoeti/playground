@@ -9,12 +9,9 @@
         <link rel="stylesheet" href="style.css">
         <!-- JS Script -->
         <script src="script.js"></script>
-        <div class="landing-text">
-            <h1 id="title">Welcome to my personal portfolio</h1>
-            <h4>something like this needs to be here</h4>
-        </div>
     </header>
 
+<<<<<<< HEAD
     <div id="welcome-section" class="intro">
 
         <h1>Hey my name is Chris</h1>
@@ -23,21 +20,66 @@
 
 
 
+=======
+>>>>>>> 7edf60876b51abc6c5892f7aa004401503d2e93d
     <body>
-        <div id="main" class="wrapper">
-        
+        <!-- Always and 4ever add a nav bar -->
+        <nav>
+            <ul id='navbar'>
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#tribute-links">DeveloperBlog</a></li>
+            </ul>
+        </nav>
+
+        <!-- Nav entry point für #welcome-section -->
+        <div id="welcome-section" class="intro">
+            <h1>Hi, my name is Chris</h1>
+            <h2>and i am a WebDeveloper</h2>
         </div>
 
-        <div id="tribute-links">
-            <h3>Weiterführende Links</h3>
-            <h4>
-                <a id="tribute-link" href="https://www.hoeserle.at" target="_blank">Mchoeti Homepage</a>
-            </h4>
+        <!-- Nav entry point für #projects -->
+        <div id="projects" class="work">
+            <h2>and here are some basic projects</h2>
+            <div class="projectch">
+            <a href="https://codepen.io/mchoeti/pen/LpLyRj" target="_blank" class="project-tile">
+                <img class="project-pic" src="https://www.planet-wissen.de/gesellschaft/essen/frischhalten/portraetfrischappertgjpg100~_v-gseapremiumxl.jpg"
+                    alt="project">
+                <div class="project-title">Tribute Page</div>
+            </a>
+            <a href="https://codepen.io/mchoeti/pen/rqMOEq" target="_blank" class="project-tile">
+                <img class="project-pic" src="http://hoeserle.at/wp-content/uploads/2018/09/PopShift.png" alt="project">
+                <div class="project-title">Technical Documentation Page</div>
+            </a>
+            <a href="https://codepen.io/mchoeti/pen/NLKYbz" target="_blank" class="project-tile">
+                <img class="project-pic" src="http://hoeserle.at/wp-content/uploads/2018/07/Graz.png" alt="project">
+                <div class="project-title">Survey Form</div>
+            </a>
+            </div>
+
         </div>
-        
+        <!-- Nav entry point  für #contact -->
+        <div id="contact" class="contact">
+            <h1></h1>
+            <h2>You can contact me, but this is all fake, sorry for that</h2>
+            <a id="profile-link" href="https://github.com/mchoeti/playground/tree/master/FCC" target="_blank" class="contact-details">Github</a>
+            <a href="https://twitter.com/mchoeti" target="_blank" class="contact-details">Twitter</a>
+            <a href="mailto:example@example.com" class="contact-details">Send a mail</a>
+            <a href="tel:555-555-5555" class="contact-details">Call me</a>
+        </div>
+
+
         <!-- Simple Footer -->
+        <!-- Nav entry point  #tribute-links -->
         <footer>
-            <p>&copy Mchoeti 2018 / Tribute Challenge</p>
+            <div id="tribute-links">
+                <h3>Weiterführende Links</h3>
+                <h4>
+                    <a id="tribute-link" href="http://www.hoeserle.at" target="_blank">Mchoeti Homepage</a>
+                </h4>
+            </div>
+            <p>&copy Mchoeti 2018 / Personal Portfolio Challenge</p>
         </footer>
     </body>
 </div>
