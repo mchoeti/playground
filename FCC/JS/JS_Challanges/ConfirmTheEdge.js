@@ -49,7 +49,7 @@ console.log(str.substr(2));
 // expected output: "ristian"
 
 // gibts den letzten Buchstaben aus von Christian  weil target nur ein Zeichen hat
-console.log(str.substr(-target.length));
+console.log("Chris " + str.substr(-target.length));
 
 // ergibt damit n, möchte ich das auf Gültigkeit prüfen, muss eine Abfrage eingebaut werdeb
 console.log(str.substr(-target.length) === target);
@@ -63,3 +63,4 @@ function confirmEndingShort1(str, target) {
     return str.substr(-target.length) === target;
   }
   console.log(confirmEndingShort1("Christian", "n"));
+
