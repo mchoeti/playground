@@ -21,3 +21,14 @@ function Dog() {
     this.color = "black";
     this.numLegs = 4;
   }
+
+
+  //  ########################################
+// Mal ein neues Haus mit InstanceOf
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+// Add your code below this line
+let myHouse = new House(4)
+myHouse instanceof House;
+console.log(myHouse.numBedrooms);
