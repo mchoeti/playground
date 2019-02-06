@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ändern der Elemente</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<!-- Simpler Body in dem 3 Example Elemente verändert werden. -->
+<body>
+
+    <h1>Ändern der Elemente mit Klasse :-) </h1>
+    <!-- Mit ul>li#orig*3{Original} erstelle ich gleich mal eine UL mit 3 Elementen mit der ID orig und dem Text Original-->
+    <ul>
+        <li id="orig">Original</li>
+        <li id="orig">Original</li>
+        <li id="orig">Original</li>
+    </ul>
+
+    <!-- Nun erstellen wir die zu ändernden Elemente ul>li#changeable*3{Changeme}  -->
+    <ul>
+        <li id="changeable">Changeme</li>
+        <li id="changeable">Changeme</li>
+        <li id="changeable">Changeme</li>
+    </ul>
+
+    <h2>Funktioniert auch generell, wichtig dabei, dass script muss danach ausgeführt werden, aber das ist sowieso klar, oder ;-)</h2>
+    <ul>
+            <li id="orig">Original</li>
+            <li id="changeable">Changeme</li>
+    </ul>
+
+    <!-- Nun bauen wir das Script ein  -->
+    <script>
+        // Zuerst setzen wir eine Variable und wählen alle Elemente mit der ID changebale
+        // selectAll() ändert den Text in allen Elementen  welche die ID = Changeable besitze
+        const anchors = d3.selectAll("li#changeable");
+        anchors.text("Geändert !!!")
+
+       // wählt man nur select() wird nur das erste Element geändert
+       //  const anchors = d3.select("li#changeable");
+    </script>
+
+
+</body>
+
+</html>

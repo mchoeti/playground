@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Hallo Welt, dass hier ist ein simples HTML Element - H1 </h1>
+
+    <script>
+        d3.select("body")
+        .append("h1")   
+        .text("Meine erstes D3 Element - auch in H1 ");
+        // Und nun noch Nummer 2 oder 3
+        d3.select("body")
+        .append("h2")   
+        .text("Element Nummer 2 - heute in H2");
+        d3.select("body")
+        .append("h4")   
+        .text("Ein weiteres Element - hier in H4 ");
+    </script>
+
+</body>
+
+</html>
