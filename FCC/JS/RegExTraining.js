@@ -213,3 +213,5 @@ let hello35 = "   Hello, World!  ";
 let wsRegex35 = /\S.*\S/; // Change this line
 let result35 = hello35.match(wsRegex35);
 console.log(hello35);
+
+// Aktuelle Regeex Übungen neu ausführen
