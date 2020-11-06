@@ -19,8 +19,27 @@ for (let counter2 = 21; counter2 > 1; counter2 -= 3) {
 }
 
 // Und damit wird der Sepplhuber angezeigt.
+// Wenn wir eine Liste haben mit Elementen macht es Sinn, das Plural zu verwenden 
 const students = ["Max", "Fritz", "Sepplhuber"];
 for (let i = 0; i < students.length; i++) {
     console.log("i: ", i);
     console.log(students[i]);
+}
+
+// eine bessere und schnellere Schreibweise wäre diese
+// aber eben hier wird eben alles ausgegeben
+// WICHIG: Hier werden alle Indices ausgegeben
+for (let i in students) {
+    console.log("i: ", i);
+    console.log(students[i]);
+}
+
+// Mal eine Zierleiste
+console.log("***************************");
+
+// Wenn wir nur den Wert haben wollen also die sogenannte For of Schreibweise
+// WICHIG: Hier werden nur die Werte ausgegben
+// Hier möchten wir einen Studenten rausholen und daher nehmen wir hier Singular
+for (const student of students) {
+    console.log(student);
 }
