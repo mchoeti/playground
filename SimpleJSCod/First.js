@@ -5,7 +5,7 @@ var line;
 var number = 10;
 
 //do a simple for loop
-for (i = 0 ; i <= number ; i++) {
+for (i = 0; i <= number; i++) {
     console.log("This is just a simple loop where number = " + i);
 }
 
