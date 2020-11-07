@@ -43,3 +43,10 @@ console.log("***************************");
 for (const student of students) {
     console.log(student);
 }
+
+// und weil es grade passt, heute ist der BIden Präsident.
+// Spaß am Samstag
+const ikeaDinger = ["Billy", "Ekket", "andereDinge"];
+for (let i in ikeaDinger) {
+    console.log("Aufbauen von " + ikeaDinger[i] + " nervt");
+}
