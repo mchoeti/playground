@@ -66,3 +66,12 @@ for (i = 10; i <= 20; i++) {
     console.log(i);
 }
 // Continue überspringt den aktuellen Umlauf und ein Break bricht die aktuelle Schleife ab.
+
+// Zum debuggen
+const message = "Debugger aktiv";
+console.log(message);
+debugger
+
+for (let i = 10; i <= 20; i++) {
+    console.log("i: ", i);
+}
