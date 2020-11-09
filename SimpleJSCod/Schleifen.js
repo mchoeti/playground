@@ -50,3 +50,19 @@ const ikeaDinger = ["Billy", "Ekket", "andereDinge"];
 for (let i in ikeaDinger) {
     console.log("Aufbauen von " + ikeaDinger[i] + " nervt");
 }
+
+// mal ein schnelles Geburtstagsbeispiel zum Thema break and continue Befehle
+for (i = 10; i <= 20; i++) {
+    //continue übespringt aktuellen Schleifendurchlauf 
+    // hier überspringen wie mal die Zahl 13
+    if (i === 13) {
+        continue;
+    }
+    // jetzt wollen wir auch noch bei 16 abbrechen und
+    if (i === 16) {
+        break;
+        // und damit kommt es nicht mal mehr zur Console.
+    }
+    console.log(i);
+}
+// Continue überspringt den aktuellen Umlauf und ein Break bricht die aktuelle Schleife ab.
