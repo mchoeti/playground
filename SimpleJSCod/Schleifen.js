@@ -67,10 +67,12 @@ for (i = 10; i <= 20; i++) {
 }
 // Continue überspringt den aktuellen Umlauf und ein Break bricht die aktuelle Schleife ab.
 
-// Zum debuggen
+// Zum debuggen üben. Wichtig für einzelne Schritte.
+// # Info eigenes Tutorial schreiben später 
 const message = "Debugger aktiv";
 console.log(message);
-debugger
+// checken warum Fehler auftritt W087  Forgotten 'debugger' statement? (W087)
+debugger;
 
 for (let i = 10; i <= 20; i++) {
     console.log("i: ", i);
