@@ -12,3 +12,13 @@ for (i = 0; i <= number; i++) {
 
 // thank the audience 
 console.log("Hello World this was just a simple one");
+
+// Ein gute Nacht Code fürs Schafe zählen
+let sheep = 0;
+for (sheep = 0; sheep <= 100; sheep++) {
+    console.log(sheep + " Schaf");
+    if (sheep === 7) {
+        console.log("Gute Nacht");
+        break;
+    }
+}
