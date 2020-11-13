@@ -1,5 +1,6 @@
+//"use strict";
+/*jshint esversion: 6 */
 // welcome to a single and simple line 
-
 // declare some variables
 var line;
 var number = 10;
