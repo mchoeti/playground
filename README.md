@@ -19,5 +19,5 @@ Webseiten mit Mappen
  3. Astronauten im All
  4. usw...
 
- Wird wieder mal Zeit ein bisserl was neues auszuprobieren
+Java Script 2020 - Neues & Altes
  -----------------
