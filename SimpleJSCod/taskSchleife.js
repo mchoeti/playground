@@ -86,4 +86,5 @@ for (const index1 in levels) {
         break;
     }
 }
-console.log("Pris von A2 bis C1: ", totalA2C1);
+console.log("Preis von A2 bis C1: ", totalA2C1);
+// Eventuell nochmals anpassen
