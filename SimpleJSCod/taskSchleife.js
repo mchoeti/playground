@@ -7,7 +7,6 @@ for (let i = 0; i <= 25; i++) {
     console.log("Ich darf im Unterricht nicht  stören " + i);
 }
 
-
 console.log("#####################################");
 // Aufgabe 2 Aufteilung der Kurse in 2 gleich große Gruppen
 let students = [
@@ -17,7 +16,7 @@ let students = [
     "Bernd",
     "Tobias",
     "Andreas",
-    "Der glorreiche siebente"
+    "Der glorreiche siebente",
 ];
 
 let students1 = [];
@@ -38,15 +37,15 @@ console.log("Gruppe2 ", students2);
 console.log("*****************************************");
 // Task Nummer 3
 
-// a) Wie viel kostet es für einen Teilnehmer, die Sprache bis 
+// a) Wie viel kostet es für einen Teilnehmer, die Sprache bis
 //    einschließlich des Levels "C1" zu lernen? Schreibe deinen Code so
 //    universell, dass er auch mit anderen Level-Bezeichnungen / Preisen
 //    zurecht käme.
 //
 // b) Wie viel kostet es, einen Teilnehmer von (einschließlich) A2 bis
 //    einschließlich C1 zu bringen?
-// 
-// c) Ein Teilnehmer möchte (maximal) 1500€ in seine Sprachkenntnisse 
+//
+// c) Ein Teilnehmer möchte (maximal) 1500€ in seine Sprachkenntnisse
 //    investieren. Bis zu welchem Level (bei A1 angefangen) können wir
 //    ihn dafür unterrichten?
 
@@ -99,8 +98,60 @@ for (const index2 in levels) {
     const price = prices[index2];
     usedBudget += price;
     if (usedBudget + price >= budget) {
-        console.log("Limit erreicht, du kannst die Kurse bis inklusive: ", levels[index2] + " besuchen");
+        console.log(
+            "Limit erreicht, du kannst die Kurse bis inklusive: ",
+            levels[index2] + " besuchen"
+        );
         break;
     }
 }
 console.log("+++++++++++++++++++++++++++");
+// Anpassen vor dem Update
+// Aufgabe 4
+
+let studentsPerCourse = [
+    ["Max", "Monika"], // Erster Kurs
+    ["Erik", "Erika"], // Zweiter Kurs
+];
+
+//a) Berechne die Anzahl der Teilnehmer in allen Kursen zusammen!
+let num = 0;
+for (const course of studentsPerCourse) {
+    console.log("course", course);
+    num += course.length;
+}
+console.log("Wir haben ", num, " Studenten");
+console.log("Das war 4A ");
+console.log("****** ** ** ** ** ** ** ** ** ** ** ** *");
+
+const studentsToCancel = "Max";
+let studentFound = false;
+for (const course of studentsPerCourse) {
+    if (course.indexOf(studentsToCancel) !== -1) {
+        const posStudentsToCancel = course.indexOf(studentsToCancel);
+        course.splice(posStudentsToCancel, 1);
+        studentFound = true;
+        break;
+    }
+}
+// Einbauen wenn Teilnehmer nicht gefunden wurde
+if (studentFound === false) {
+    console.log("Kein Teilnehmer wurde entfernt");
+}
+console.log("Aufgabe 4B:", studentFound, studentsPerCourse);
+
+
+// Wo sind wniger drinnen
+let indexLeastStudents = -1;
+for (const i in studentsPerCourse) {
+    const course = studentsPerCourse[i];
+
+    if (indexLeastStudents === -1) {
+        indexLeastStudents = i;
+    } else {
+        if (course.length < studentsPerCourse[indexLeastStudents].length) {
+            indexLeastStudents = i;
+        }
+    }
+}
+console.log("Aufgabe 4, C:", indexLeastStudents);
