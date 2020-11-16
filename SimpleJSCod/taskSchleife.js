@@ -114,7 +114,7 @@ let studentsPerCourse = [
     ["Erik", "Erika"], // Zweiter Kurs
 ];
 
-//a) Berechne die Anzahl der Teilnehmer in allen Kursen zusammen!
+// Berechne die Anzahl der Teilnehmer in allen Kursen zusammen!
 let num = 0;
 for (const course of studentsPerCourse) {
     console.log("course", course);
@@ -141,7 +141,7 @@ if (studentFound === false) {
 console.log("Aufgabe 4B:", studentFound, studentsPerCourse);
 
 
-// Wo sind wniger drinnen
+// Wo sind weniger drinnen
 let indexLeastStudents = -1;
 for (const i in studentsPerCourse) {
     const course = studentsPerCourse[i];
