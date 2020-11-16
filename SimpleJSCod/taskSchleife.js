@@ -88,3 +88,21 @@ for (const index1 in levels) {
 }
 console.log("Preis von A2 bis C1: ", totalA2C1);
 // Eventuell nochmals anpassen
+
+// Neuer Task, neue Aufgabe Teilnehmer möchte maximal 1500 investieren
+
+let budget = 1500;
+let usedBudget = 0;
+for (const index2 in levels) {
+    debugger;
+    const level = levels[index2];
+    const price = prices[index2];
+    usedBudget += price;
+    if (usedBudget + price >= budget) {
+        console.log("Limit erreicht, du kannst bis inklusive: ", levels[index2]);
+        break;
+    }
+}
+
+
+console.log("Used Budget: ", usedBudget);
