@@ -33,3 +33,20 @@ function sayHello2(sayHelloName, language) {
 sayHello2("Christian", "de");
 sayHello2("Max", "de");
 sayHello2("Erika", "en");
+
+
+// Was sind eigentlich Standardparameter
+// Wenn ich immer einen Standardwert vergebe, dann kann ich den auch so setzen.
+/// Beispielsweise eine standardmäßige deutsche Begrüßung
+function sayHello2(sayHelloName, language = "de") {
+    if (language === "de") {
+        console.log("Hallo und Willkommen " + sayHelloName + "!");
+    } else if (language === "en") {
+        console.log("Hello and welcome " + sayHelloName + "!");
+    }
+}
+
+console.log("Werte mit Standardparameter");
+sayHello2("Chris", "en");
+sayHello2("Hermann");
+sayHello2("Trude");
