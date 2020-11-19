@@ -31,3 +31,45 @@ addStudent("Sepp");
 addStudent("Michael");
 addStudent("Trude");
 console.log(students);
+
+
+const items = [15, 25, 30];
+
+function summe(liste) {
+    // Summe berechnen
+    let sum = 0;
+    for (let element of liste) {
+        sum += element;
+        //console.log("Summe ", sum);
+    }
+    // gibt die Summe zurück damit ich weiterarbeiten kann
+    return sum;
+    // ein Return beendet immer die Funktion daher kommt das hier nicht mehr zum Einsatz
+    console.log("Hallo Welt");
+}
+
+let itemsSum = summe(items);
+// ist da die Summe 70 drinnen ?
+console.log(itemsSum === 70);
+console.log(summe(items));
+
+// EIne Funktion um den INdex zu ermitteln.
+function indexOf(liste, value) {
+    for (const i in liste) {
+        // Ist Liste i gleich der Value ? 
+        if (liste[i] === value) {
+            //Wenn gefunden gib mir die Position und beende die For Schleife
+            return i;
+        }
+        // wird ein Wert nicht gefunden gibts eben ein -1
+        return -1;
+        // eigentlich sollte man -1 nehmen aber ein String geht auch nur kann ich mit dem nicht rechnen 
+        //return "Leider nicht gefunden";
+
+    }
+}
+
+const liste = ["Hallo", "Welt", "oder so", "!!"];
+// Hier ruf ich gleich mal die Funktion indexOf auf
+// und suche nach dem Wert "oder so"
+console.log(indexOf(liste, "oder so"));
