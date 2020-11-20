@@ -53,7 +53,7 @@ let itemsSum = summe(items);
 console.log(itemsSum === 70);
 console.log(summe(items));
 
-// EIne Funktion um den INdex zu ermitteln.
+// Eine Funktion um den INdex zu ermitteln.
 function indexOf(liste, value) {
     for (const i in liste) {
         // Ist Liste i gleich der Value ? 
@@ -61,15 +61,16 @@ function indexOf(liste, value) {
             //Wenn gefunden gib mir die Position und beende die For Schleife
             return i;
         }
-        // wird ein Wert nicht gefunden gibts eben ein -1
-        return -1;
-        // eigentlich sollte man -1 nehmen aber ein String geht auch nur kann ich mit dem nicht rechnen 
-        //return "Leider nicht gefunden";
-
+        // Bug warum auch immer er gibt nur mehr - 1 zurück
+        // else {
+        //     return "Leider nicht gefunden";
+        // }
     }
 }
 
 const liste = ["Hallo", "Welt", "oder so", "!!"];
 // Hier ruf ich gleich mal die Funktion indexOf auf
 // und suche nach dem Wert "oder so"
-console.log(indexOf(liste, "oder so"));
+console.log(indexOf(liste, "Welt"));
+// oder bei nicht auffinden des Strings
+//console.log(indexOf(liste, "sicher nicht"));
