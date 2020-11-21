@@ -30,7 +30,7 @@ function getSmallestCourse() {
 }
 console.log("getSmallestCourse()", getSmallestCourse());
 
-
+debugger;
 // 1B Funktion die einen Teilnehmer in eine Funktion einfügt.
 console.log("***************************************");
 function addStudent (name) {
