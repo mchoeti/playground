@@ -2,10 +2,9 @@
 /*jshint esversion: 6 */
 
 const courses = [
-    ["Julia", "Max", "Doris"],
-    ["Alpha", "Beta", "Gamma", "Delta"],
-    ["Christian", "Anika"],
-    ["Alpha", "Beta", "Gamma", "Delta", "Peta"],
+    ["Alpha", "Beta", "Gamma"],
+    ["Christian", "Anika", "Peter"],
+    ["Alpha", "Beta"]
 ];
 
 
@@ -27,6 +26,22 @@ function getSmallestCourse() {
         }
     }
     // nicht auf den Rückgabewert vergessen
-    return smallestCourse;
+    return smallestIndex;
 }
 console.log("getSmallestCourse()", getSmallestCourse());
+
+
+// 1B Funktion die einen Teilnehmer in eine Funktion einfügt.
+console.log("***************************************");
+function addStudent (name) {
+    // Zuerst ermitteln welcher Kurs am wenigsten Teilnehmer hat
+    const smallestCourse = getSmallestCourse();
+    //console.log(smallestCourse);
+    courses[smallestCourse].push(name);
+
+}
+
+addStudent("Der Neue");
+addStudent("Der Neue1");
+addStudent("Der Neue2");
+console.log(courses);
