@@ -31,7 +31,7 @@ addStudent("Sepp");
 addStudent("Michael");
 addStudent("Trude");
 console.log(students);
-
+//
 
 const items = [15, 25, 30];
 
