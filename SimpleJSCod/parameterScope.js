@@ -56,7 +56,7 @@ console.log(summe(items));
 // Eine Funktion um den INdex zu ermitteln.
 function indexOf(liste, value) {
     for (const i in liste) {
-        // Ist Liste i gleich der Value ? 
+        // Ist Liste i gleich der Value ?
         if (liste[i] === value) {
             //Wenn gefunden gib mir die Position und beende die For Schleife
             return i;

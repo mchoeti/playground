@@ -33,7 +33,8 @@ console.log("getSmallestCourse()", getSmallestCourse());
 debugger;
 // 1B Funktion die einen Teilnehmer in eine Funktion einfügt.
 console.log("***************************************");
-function addStudent (name) {
+
+function addStudent(name) {
     // Zuerst ermitteln welcher Kurs am wenigsten Teilnehmer hat
     const smallestCourse = getSmallestCourse();
     //console.log(smallestCourse);
