@@ -24,42 +24,46 @@ for (sheep = 0; sheep <= 100; sheep++) {
 }
 
 // Nach so einem Tag kann man nur ein paar kleiner Programme schreiben
-const stressTage = [
+const arbeitsTage = [
     ["Montag", "Dienstag", "Mittwoch"],
+    ["Weekend"],
     ["Donnerstag", "Freitag"],
 ];
 
 function getFunnyDays() {
-    console.log(stressTage);
-    let smallestDay = 0;
-    let smallestPeriodIndex = 1;
-    for (let index in stressTage) {
-        let tage = stressTage[index];
+    console.log(arbeitsTage);
+    // Anzahl der kürzesten Wochentage
+    let smallestPeriod = 0;
+    // als Startvariable, weil -1 kann der Arraywert nicht sein , brauch ich später für IF
+    // Hier wird
+    let smallestPeriodIndex = -1;
+    for (let index in arbeitsTage) {
+        let tage = arbeitsTage[index];
         // Array durchgehen Element 0 wird ausgegeben  - im ersten Durchlauf
         console.log(tage);
         // Array durchgehen Länge Element 0 wird ausgegeben - im ersten Durchlauf
+        // danach gibt er immer die Länge des Arrays aus.
         console.log(tage.length);
 
-        // Hm..  IfAbfrage neu bauen 
-        if (stressTage.length < smallestDay) {
-            smallestIndex = index;
-            console.log("Test" + smallestIndex);
+        // Sind wir im ersten Schleigendurchlauf ?
+        // Daher Frage ich mal
+        if (smallestPeriodIndex === -1) {
+            // bin ich also noch im ersten Durchlauf, möchte ich den smallestPeriodIndex von -1 auf aktuellen Wert setzen i steht dabei für den Zähler.
+            smallestPeriodIndex = index;
+            // hier befülle ich die Var smallestPeriod mir der länge der Tage.
+            smallestPeriod = tage.length;
+        }
+        // Zum besseren Verständnis hab ich hier 2 If Abfragen gemacht.
+        // In der ersten wird festgestellt gut, kürzester Kurs
+        // In der 2. wird grefragt ob de jetzt betrachtete Kurz kürzer ist als der vorige
+        if (tage.length < smallestPeriod) {
+            smallestPeriodIndex = index;
+            smallestPeriod = tage.length;
         }
     }
+    // muss natürlich noch zurückgegeben werden 
+    return smallestPeriodIndex;
+
 }
-
-getFunnyDays();
-
-
-
-
-// for (let index in courses) {
-//     let course = courses[index];
-//     // Check ob die For Schleife klappt.
-//     //console.log(course);
-//     // Hier fragen wir ob wir noch im ersten Schleifendurchlauf sind.
-//     if (smallestIndex === -1 || course.length < smallestCourse) {
-//         smallestIndex = index;
-//         smallestCourse = course.length;
-//     }
-// }
+//getFunnyDays();
+console.log("Der Kürzeste Intervall ist: ", getFunnyDays());
