@@ -2,7 +2,7 @@
 /*jshint esversion: 6 */
 
 // Einfaches Wörterbuch entwickeln
-
+// Deutsch und Englisch
 const LANGUAGE_DE = [
     "hallo",
     "heute",

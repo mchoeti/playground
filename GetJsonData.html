@@ -5,12 +5,12 @@
 
     <h2>Use the XMLHttpRequest to get the content of a file.</h2>
     <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
-
+    <!-- Anpassen und mit CSS umbauen  -->
     <p id="demo"></p>
 
     <script>
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
+        xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
                 //name and age
@@ -25,7 +25,7 @@
         xmlhttp.open("GET", "http://api.open-notify.org/astros.json", true);
         xmlhttp.send();
     </script>
-    
+
     <!-- The File is available here:  -->
     <p>Here is the JSON output from Open Data - How many people are in space right now
         <a href="http://api.open-notify.org/astros.json" target="_blank">JSON File</a>
