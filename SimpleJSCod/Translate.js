@@ -31,3 +31,4 @@ function translateWord(word) {
 }
 
 console.log('translateWord("Sprachkurs")', translateWord("Sprachkurs"));
+// Heute Abend noch die Anpassungen vornehmen
