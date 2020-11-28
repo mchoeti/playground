@@ -40,6 +40,10 @@ console.log('translateWord("Sprachkurs")', translateWord("Sprachkurs"));
 console.log('translateWord("Sprachkurs2")', translateWord("Sprachkurs2"));
 
 // Der erste Buchstabe eines Wortes soll in Uppercase umgewandelt werden.
+/**
+ * Setzt den ersten Buchstaben in Uppercase
+ * @param {*} word 
+ */
 function ucFirst(word) {
     const firstLetter = word[0];
     // Slice gibt mir das zurück was ich möchte, ich beginne beim 2. Zeichen bis zum Ende
@@ -56,7 +60,12 @@ console.log('ucFirst("sprachkurs")', ucFirst("sprachkurs"));
 // Jetzt übersetzren wir mal einen gesamten Satz
 // Beispielsweise  translateSentence("Hallo und willkommen beim Sprachkurs")
 // // Rückgabewert: "Hello and welcome beim language course"
+// / /Mein Erster Parameter als / und 2 mal Sternchen und dann return drücken
 
+/**
+ * Übersetzt einen ganzen Satz
+ * @param {*} sentence 
+ */
 function translateSentence(sentence) {
     // Zerlegen des Satzes
     const words = sentence.split(" ");
