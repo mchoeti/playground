@@ -89,3 +89,4 @@ function translateSentence(sentence) {
 }
 
 console.log("translateSentence: ", translateSentence("Hallo und willkommen beim Sprachkurs"));
+// und fertig für heute
