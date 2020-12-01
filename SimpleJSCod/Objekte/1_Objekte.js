@@ -39,3 +39,6 @@ console.log(student2);
 
 const property = "name";
 console.log(student[property]);
+// Beispiel aus dem student2 mit autoverfüllständigen sieht man er MUSS mit eckigen Klammern zugreifen 
+// Auch bei Leerzeichen brauch ich immer die eckige Schreibweise.
+console.log(student2["gewünschter Kurs"]);
