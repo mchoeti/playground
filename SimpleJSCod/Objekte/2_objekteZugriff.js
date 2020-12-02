@@ -7,7 +7,8 @@ const student = {
     name: "Max",
     alter: 30,
     kurs: "Deutsch",
-    enrolled: false
+    enrolled: false,
+    numberOfCourses: 0
 };
 
 // Wenn Student enrolled ist soll Hallo Welt ausgegeben werden
@@ -19,7 +20,7 @@ if (student.enrolled) {
 // Bei Zugriff auf Eigenschaften die nicht exisitieren wird undefined ausgegeben.
 console.log(student.unbkannt);
 
-// Prüfen of Eigenschaft existiert, Wert komplett egal
+// Prüfen of Eigenschaft existiert, Wert komplett egal ; auch wenn der Wert 0 ist
 if ("enrolled" in student) {
     console.log("Enrolled gibts");
 }
