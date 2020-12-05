@@ -40,11 +40,8 @@ function addStudent (name) {
     courses[smallestCourse].push(name);
 
 }
+
 addStudent("Der Neue");
 addStudent("Der Neue1");
 addStudent("Der Neue2");
-addStudent("Der Alte");
 console.log(courses);
-
-
-// Aufgabe 3
