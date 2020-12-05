@@ -39,7 +39,7 @@ const LANGUAGE_DE = [
     "willkommen",
     "mikrofon",
     "und"
-]
+];
 
 const LANGUAGE_EN = [
     "hello",
@@ -48,9 +48,31 @@ const LANGUAGE_EN = [
     "welcome",
     "microphone",
     "and"
-]
+];
 
-let DE_TO_EN = {}
+let DE_TO_EN = {};
+
+for (const index in LANGUAGE_DE) {
+    const deutschesWort = LANGUAGE_DE[index];
+    //console.log(deutschesWort);
+    const englischesWort = LANGUAGE_EN[index];
+    //console.log(englischesWort);
+
+    // Englisches Word auf die Position des Deutschn gesetzt
+    DE_TO_EN[deutschesWort] = englischesWort;
+}
+
+// Kurze Prüfung pb DE auch En enspricht
+
+
+// aufpassen, keine Funktion sondern ein Arrays
+console.log("DE_TO_EN", DE_TO_EN["hallo"]);
+
+
+
+
+
+
 
 // Schreibe deinen Code hier, der das Objekt "DE_TO_EN" befüllt!
 
@@ -59,32 +81,47 @@ let DE_TO_EN = {}
 // Die Teilnehmerliste für einen Sprachkurs wird jetzt als Array
 // geführt, das wiederum ein Objekt pro Teilnehmer enthält:
 // 
-const students = [
-        { firstname: "Max", lastname: "Mustermann", age: 21 },
-        { firstname: "Laura", lastname: "Müller", age: 25 },
-        { firstname: "Julia", lastname: "Schreiber", age: 30 },
-        { firstname: "Tobias", lastname: "Lieb", age: 19 }
-    ]
-    // 2a) Die Sprachschule hat eine Marketing-Agentur engagiert, die 
-    //     jetzt erstmal Marktforschung betreibt.
-    // 
-    //     Der Chef beauftragt uns / dich, das durchschnittliche Alter
-    //     der Teilnehmer zu berechnen. Diese Berechnung soll natürlich
-    //     mit Hilfe von JavaScript-Code durchgeführt werden!
-    // 
-    // 2b) Füge einen neuen Teilnehmer mit dem Namen "Christian Schmidt"
-    //     hinzu. Lasse bei diesem Teilnehmer die Eigenschaft "age" weg - 
-    //     wir wissen das Alter noch nicht. 
-    // 
-    // 2c) Funktioniert der Code aus Teilaufgabe 2a) noch, auch wenn er
-    //     auf der jetzt aktualisierten Teilnehmerliste ausgeführt wird?
-    //     Wenn nicht, passe den Code so an, dass er damit klarkommt,
-    //     dass bei einem (oder mehreren) Teilnehmern das Alter nicht
-    //     angegeben ist.
-    // 
-    //     PS: So enstehen übrigens oft Bugs: Wenn man Code zum ersten
-    //         mal schreibt (2a), geht man von Dingen aus, die erstmal
-    //         immer erfüllt sind - später (Teilaufgabe 2b) ändern
-    //         sich diese Voraussetzungen, und der Code läuft nicht
-    //         mehr korrekt durch!
-    //
+const students = [{
+        firstname: "Max",
+        lastname: "Mustermann",
+        age: 21
+    },
+    {
+        firstname: "Laura",
+        lastname: "Müller",
+        age: 25
+    },
+    {
+        firstname: "Julia",
+        lastname: "Schreiber",
+        age: 30
+    },
+    {
+        firstname: "Tobias",
+        lastname: "Lieb",
+        age: 19
+    }
+]
+// 2a) Die Sprachschule hat eine Marketing-Agentur engagiert, die 
+//     jetzt erstmal Marktforschung betreibt.
+// 
+//     Der Chef beauftragt uns / dich, das durchschnittliche Alter
+//     der Teilnehmer zu berechnen. Diese Berechnung soll natürlich
+//     mit Hilfe von JavaScript-Code durchgeführt werden!
+// 
+// 2b) Füge einen neuen Teilnehmer mit dem Namen "Christian Schmidt"
+//     hinzu. Lasse bei diesem Teilnehmer die Eigenschaft "age" weg - 
+//     wir wissen das Alter noch nicht. 
+// 
+// 2c) Funktioniert der Code aus Teilaufgabe 2a) noch, auch wenn er
+//     auf der jetzt aktualisierten Teilnehmerliste ausgeführt wird?
+//     Wenn nicht, passe den Code so an, dass er damit klarkommt,
+//     dass bei einem (oder mehreren) Teilnehmern das Alter nicht
+//     angegeben ist.
+// 
+//     PS: So enstehen übrigens oft Bugs: Wenn man Code zum ersten
+//         mal schreibt (2a), geht man von Dingen aus, die erstmal
+//         immer erfüllt sind - später (Teilaufgabe 2b) ändern
+//         sich diese Voraussetzungen, und der Code läuft nicht
+//         mehr korrekt durch!
+//
