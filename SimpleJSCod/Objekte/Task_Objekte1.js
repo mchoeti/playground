@@ -31,7 +31,7 @@ for (const index in LANGUAGE_DE) {
     const englischesWort = LANGUAGE_EN[index];
     //console.log(englischesWort);
 
-    // Englisches Word auf die Position des Deutschn gesetzt
+    // Mit den Klammern wird die Eigenschaft zugewiesen und darauf mit dem = dann der Wert. Sodass dann hallo = hello enthält.
     DE_TO_EN[deutschesWort] = englischesWort;
 }
 
