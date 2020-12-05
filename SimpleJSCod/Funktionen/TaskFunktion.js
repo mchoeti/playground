@@ -32,16 +32,24 @@ console.log("getSmallestCourse()", getSmallestCourse());
 
 // 1B Funktion die einen Teilnehmer in eine Funktion einfügt.
 console.log("***************************************");
+<<<<<<< HEAD:SimpleJSCod/TaskFunktion.js
 function addStudent (name) {
     debugger;
+=======
+
+function addStudent(name) {
+>>>>>>> fa4b172e7709bfbfd420251c33ed62dfca387026:SimpleJSCod/Funktionen/TaskFunktion.js
     // Zuerst ermitteln welcher Kurs am wenigsten Teilnehmer hat
     const smallestCourse = getSmallestCourse();
     //console.log(smallestCourse);
     courses[smallestCourse].push(name);
 
 }
-
 addStudent("Der Neue");
 addStudent("Der Neue1");
 addStudent("Der Neue2");
+addStudent("Der Alte");
 console.log(courses);
+
+
+// Aufgabe 3
