@@ -39,4 +39,4 @@ for (const index in LANGUAGE_DE) {
 console.log("DE_TO_EN", DE_TO_EN);
 
 // aufpassen, keine Funktion sondern ein Arrays
-console.log("DE_TO_EN", DE_TO_EN["hallo"]);
+console.log("DE_TO_EN", DE_TO_EN['hallo']);
