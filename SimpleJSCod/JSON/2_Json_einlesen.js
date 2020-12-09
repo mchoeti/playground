@@ -2,7 +2,7 @@
 /*jshint esversion: 6 */
 
 const fs = require("fs");
-const data = fs.readFileSync("data.json", { encoding: "utf-8" })
+const data = fs.readFileSync("data.json", { encoding: "utf-8" });
 
 console.log("data", data);
 console.log("type of data", typeof data);
