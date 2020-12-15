@@ -1,5 +1,33 @@
 body {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+    color: green;
+    /* 1 rem meistens 16 pixel  */
+    font-size: 2rem;
+    border: 4px solid grey;
+    /* Außerhalb des Rahmens den Abstand zu beinflussen, wäre Margin (margin-top für oben usw..) ;*/
+    margin: 30px;
+    /* Innerhalb des Rahmens den Abstand zu beinflussen, wäre Padding */
+    padding: 50px;
+    /* Margin und padding kommen noch dazu */
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Hier die Info für ID*/
+
+#main-heading {
+    color: blue;
+}
+
+
+/* Hier die Info für Class */
+
+.content-heading {
+    color: yellow;
 }
