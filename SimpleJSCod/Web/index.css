@@ -18,6 +18,22 @@ h1 {
     height: 300px;
 }
 
+.container {
+    width: 400px;
+    margin-top: 0px;
+    /* Hier wird es dann in der Mitte zentrier. Die Breite wäre eben 400 und der rest wird aufgeteilt.
+    Also zentriert */
+    margin-left: auto;
+    margin-bottom: 0px;
+    margin-right: auto;
+}
+
+.heading-number {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+;
 
 /* Hier die Info für ID*/
 
