@@ -28,12 +28,23 @@ h1 {
     margin-right: auto;
 }
 
-.heading-number {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+.content-heading {
+    color: yellow;
+    font-size: 1.5rem;
 }
 
-;
+
+/* Siehe Tool Tipp: Bezieht sich nur auf Elemente welche verschachtelt sind , also content-heading und heading number. Hier wäre es ein direktes Child. Aber es können x dazwischen sein.*/
+
+.content-heading .heading-number {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkcyan;
+}
+
+
+/* Was komplexeres */
+
+.heading-number;
 
 /* Hier die Info für ID*/
 
