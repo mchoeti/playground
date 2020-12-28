@@ -28,7 +28,7 @@ window.addEventListener("loaded", () => {
 
 // Hier holen wir uns einmal ein Element und dann ändern wir die Werte
 document.addEventListener("DOMContentLoaded", () => {
-// mal das Element abholen
+    // mal das Element abholen
     const dateElement = document.getElementById("date-countdown");
     console.log(dateElement.innerText);
     // Ändern und wieder ausgeben, auch in der Seite
@@ -37,7 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // mit Inner HTMl kann man auch HTML verwenden aber wirklich nicht schön.
     // Außerdem is es ein SIcherheitsproblem !!!!! daher immer innerText verwenden.
-    dateElement.innerHTML = "<strong>24.12.2020</strong>";
+    dateElement.innerHTML = "<strong>28.12.2020</strong>";
     console.log("Neuer Wert mit Inner HTLM ", dateElement.innerHTML);
 
 });
+
+// // Is eigentlich mein Standard
+// document.getElementById("DOMContentLoaded", () => {
+
+// });
