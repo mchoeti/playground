@@ -26,4 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(currentCounter);
     });
 
+    // To DO Bugfixen weil beim 2. Klick eine NaN kommt
+
 });
