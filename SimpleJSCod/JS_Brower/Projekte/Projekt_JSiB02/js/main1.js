@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (const cardHeader of cardHeaders) {
         //console.log("CardHeadsers", cardHeaders);
-        // Array cardHeaders wird Wert für Wert durchgegangen und der Wert in der Variablen cardHeader abgespeichert. Die kann natürlich irgendwie sich nennen.
+        // Array cardHeaders wird Wert für Wert durchgegangen und der Wert in der Variablen cardHeader abgespeichert. Die kann sich natürlich irgendwie  nennen.
         cardHeader.addEventListener("click", () => {
 
             alert("Aber Hallo du hast den HEader geklickt");

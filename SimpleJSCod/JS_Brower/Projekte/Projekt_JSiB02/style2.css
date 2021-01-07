@@ -8,7 +8,10 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
-.card {
+
+/* Mehr Komplexität mit css selectoren  */
+
+.card div.card-header {
     margin-top: 1rem;
-    colour: green;
+    font-weight: bold;
 }
