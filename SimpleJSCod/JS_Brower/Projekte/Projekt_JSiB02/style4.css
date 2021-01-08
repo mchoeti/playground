@@ -12,3 +12,11 @@ body {
 .card {
     margin-top: 1rem;
 }
+
+.card div.card-header {
+    font-weight: bold;
+}
+
+[data-help] {
+    cursor: pointer;
+}
