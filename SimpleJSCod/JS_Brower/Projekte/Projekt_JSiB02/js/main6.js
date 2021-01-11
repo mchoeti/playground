@@ -1,20 +1,19 @@
 //"use strict";
 /*jshint esversion: 6 */
-"use strict"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const helpElements = document.querySelectorAll("[data-help]")
+    const helpElements = document.querySelectorAll("[data-help]");
     for (const helpElement of helpElements) {
         helpElement.addEventListener("click", (event) => {
-            event.preventDefault()
+            event.preventDefault();
 
-            const helpText = helpElement.attributes["data-help"].value
-            alert(helpText)
-        })
+            const helpText = helpElement.attributes["data-help"].value;
+            alert(helpText);
+        });
     }
 
-    const cardElements = document.getElementsByClassName("card")
+    const cardElements = document.getElementsByClassName("card");
     for (const cardElement of cardElements) {
 
         // if (cardElement.style["background-color"] === "") {
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // }
 
         if (cardElement.style.backgroundColor === "") {
-            cardElement.style.backgroundColor = "darkred"
+            cardElement.style.backgroundColor = "darkred";
         }
 
         // cardElement.addEventListener("click", () => {
@@ -31,4 +30,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-})
+});
