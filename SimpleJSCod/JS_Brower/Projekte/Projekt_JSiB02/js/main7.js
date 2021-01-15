@@ -1,6 +1,6 @@
 //"use strict";
 /*jshint esversion: 6 */
-
+// Vorbereitung_ for Next session
 document.addEventListener("DOMContentLoaded", () => {
 
     const helpElements = document.querySelectorAll("[data-help]");
