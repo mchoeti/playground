@@ -1,6 +1,6 @@
 //"use strict";
 /*jshint esversion: 6 */
-
+// Mit STRG und Leertaste gibts die Autocomplete    
 document.addEventListener("DOMContentLoaded", () => {
 
     const helpElements = document.querySelectorAll("[data-help]");
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cardElement.style.backgroundColor = "darkred";
         }
 
+        // Mit STRG und Leertaste gibts die Autocomplete        
         // cardElement.addEventListener("click", () => {
         //     cardElement.style.display = "none"
         // })
