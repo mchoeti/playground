@@ -1,16 +1,16 @@
-"use strict"
-
+//"use strict";
+/*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", () => {
 
-  const helpElements = document.querySelectorAll("[data-help]")
-  for(const helpElement of helpElements) {
-    helpElement.addEventListener("click", (event) => {
-      event.preventDefault()
+    const helpElements = document.querySelectorAll("[data-help]");
+    for (const helpElement of helpElements) {
+        helpElement.addEventListener("click", (event) => {
+            event.preventDefault()
 
-      const helpText = helpElement.attributes["data-help"].value
-      alert(helpText)
-    })
-  }
+            const helpText = helpElement.attributes["data-help"].value;
+            alert(helpText);
+        });
+    }
 
 
-}) 
+});
