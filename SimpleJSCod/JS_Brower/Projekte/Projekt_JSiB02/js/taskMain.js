@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardHeaders = document.getElementsByClassName("card-header");
     console.log("cardHeaders");
     for (const cardHeader of cardHeaders) {
+
+        // für Cursor Eigenschaft
+        cardHeader.style.cursor = "pointer";
+
         cardHeader.addEventListener("click", (event) => {
             console.log("Du hast geklickt");
             const cardBody = cardHeader.nextElementSibling;
