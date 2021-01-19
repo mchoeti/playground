@@ -14,18 +14,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardHeaders = document.getElementsByClassName("card-header");
     console.log("cardHeaders");
     for (const cardHeader of cardHeaders) {
-
         // für Cursor Eigenschaft
         cardHeader.style.cursor = "pointer";
 
+        // Notwendig um schon vorher mit den Variablen arbeiten zu können
+        const cardBody = cardHeader.nextElementSibling;
+        const cardIcon = cardHeader.querySelector(".card-toggle-icon");
+
+        // damit es beim Start NICHT sichtbar ist
+        cardBody.classList.add("d-none");
+
+        // Austauschen der Pfeile
+        cardIcon.classList.remove("fa-angle-double-down");
+        cardIcon.classList.add("fa-angle-double-right");
+
         cardHeader.addEventListener("click", (event) => {
             console.log("Du hast geklickt");
-            const cardBody = cardHeader.nextElementSibling;
+            //const cardBody = cardHeader.nextElementSibling;
             console.log("Du hast geklickt und das is der Body: ", cardBody);
 
-            // ACHTUNG nie die Klasse vergessen also die . notation 
+            // ACHTUNG nie die Klasse vergessen also die . notation
             // Also den PUNKT !!!!
-            const cardIcon = cardHeader.querySelector(".card-toggle-icon");
+            //const cardIcon = cardHeader.querySelector(".card-toggle-icon");
             // EInfaches uns simples Ausblenden
             //cardBody.style.display = "none";
 
