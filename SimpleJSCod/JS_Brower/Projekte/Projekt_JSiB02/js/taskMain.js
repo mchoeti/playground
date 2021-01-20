@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Austauschen der Pfeile
         cardIcon.classList.remove("fa-angle-double-down");
         cardIcon.classList.add("fa-angle-double-right");
+        // Immer bedenken, dass wir die vorgegeben Klassen von Bootstrap verwenden
 
         cardHeader.addEventListener("click", (event) => {
             console.log("Du hast geklickt");
