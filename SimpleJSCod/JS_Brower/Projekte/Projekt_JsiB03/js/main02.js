@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
         liElement.classList.add("list-group-item");
 
         const ulElement = document.querySelector("ul.list-group");
-        ulElement.appendChild(liElement);
+        const lastElement = ulElement.appendChild(liElement);
+        console.log(lastElement);
     });
+
+    // Trying to remove the button
+    const removeStudentButton = document.getElementById("remove-student");
+    // Funktion eingebaut
+    removeStudentButton.addEventListener("click", () => {
+        console.log("Und nun hast du den Remove Button geklickt");
+
+    });
+
+
 });

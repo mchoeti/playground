@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Damit wird das Element wirklich entfernt
             closeButton.parentElement.remove();
+            console.log("Jetzt is er weg");
         });
     }
 });
