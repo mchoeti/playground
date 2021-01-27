@@ -22,5 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const ulElement = document.querySelector("ul.list-group");
         ulElement.appendChild(liElement);
+
+        // Alternativ kann man aber auch alles hinzufügen beispielsweise ein simples Element.
+        simpleElement = document.createElement("p");
+        simpleElement.appendChild(document.createTextNode("Simples Element dazu"));
+        liElement.appendChild(simpleElement);
     });
 });

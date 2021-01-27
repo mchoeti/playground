@@ -34,5 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeH2[0].remove();
     });
 
+    // Anpassen und editieren. Eventuell neuen Button einbauen
 
 });
