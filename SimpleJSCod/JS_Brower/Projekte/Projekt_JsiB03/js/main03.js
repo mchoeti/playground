@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Alternativ kann man aber auch alles hinzufügen beispielsweise ein simples Element.
         simpleElement = document.createElement("p");
+        // nicht vergessen createTextNode verwenden
         simpleElement.appendChild(document.createTextNode("Simples Element dazu"));
         liElement.appendChild(simpleElement);
     });
