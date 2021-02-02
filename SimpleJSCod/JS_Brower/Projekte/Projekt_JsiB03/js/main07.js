@@ -37,5 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
         nameInput.value = "";
     });
 
+    nameInput.addEventListener("keypress", (event) => {
+        // Damit geben wir auch gleich mal alle Infs aus. Man kann bspl anhand des keyCode die Taste fixieren
+        console.log(event);
+        // if (event.keyCode === 13) {
+        //     alert("Enter wurde gedrückt");
+        // }
+        if (event.key === "Enter") {
+            alert("Enter wurde gedrückt");
+        }
+
+    });
+
 
 });
