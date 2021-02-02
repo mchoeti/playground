@@ -8,6 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const studentList = document.getElementById("students-list");
     const agbInput = document.getElementById("agbInput");
 
+    // Hinzufügen um alle Elemente in via Klasse abzufangen , danach nehmen wir einen FOR Loop und gehen durch
+    const listElements = document.querySelectorAll(".list-group-item");
+    // Funktion für alle auch neu hinzugefügte verwenden,
+    const removeLiElement = (liElement) => {
+        liElement.remove();
+    };
+
+
+    for (const liElement of listElements) {
+        liElement.addEventListener("click", () => {
+            removeLiElement(liElement);
+        });
+    }
 
     addStudentButton.addEventListener("click", (event) => {
         event.preventDefault();
@@ -32,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
         liElement.appendChild(strongElement);
         liElement.classList.add("list-group-item");
 
+        // EInfügen der Remove Funktion auch für neu hinzugefügte Elemente
+        liElement.addEventListener("click", () => {
+            removeLiElement(liElement);
+        });
+
         studentList.appendChild(liElement);
 
         nameInput.value = "";
@@ -48,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+
+
 
 
 });
