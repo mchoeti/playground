@@ -24,6 +24,35 @@ document.addEventListener("DOMContentLoaded", () => {
             newButtonElement.classList.add("destroy");
             console.log(newButtonElement);
 
+            // Neues Label 
+            const newLabelElement = document.createElement('label');
+            newLabelElement.appendChild(
+                document.createTextNode(forTheKey.value)
+            );
+            console.log(newLabelElement);
+
+            // Neue CheckBox und Klasse vergeben
+            const newInputCheckbox = document.createElement('input');
+            newInputCheckbox.type = "checkbox";
+            newInputCheckbox.classList.add("toggle");
+
+            // Neues div
+            const newDivElement = document.createElement("div");
+            newDivElement.classList.add("view");
+            newDivElement.appendChild(newInputCheckbox);
+            newDivElement.appendChild(newLabelElement);
+            newDivElement.appendChild(newButtonElement);
+
+            // Neues List Elemente
+            const newListElement = document.createElement("li");
+            newListElement.appendChild(newDivElement);
+
+            //Und Jetzt mit Prepend als erste hinzufügen 
+            //todoListElement.prepend(newListElement);
+            // oder mit APPEND hinten anhängen
+            todoListElement.append(newListElement);
+            //todoListElement.prepend(newLiElement);
+
 
 
 
