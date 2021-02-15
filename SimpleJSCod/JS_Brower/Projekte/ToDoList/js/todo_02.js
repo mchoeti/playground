@@ -13,8 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
         // Mal schauen was da alles möglich ist beginnend mit CLG
         console.log(liElement.innerHTML);
         const checkBoxElement = liElement.querySelector(".toggle");
+        const destroyButtonElement = liElement.querySelector(".destroy");
+
         checkBoxElement.addEventListener("change", () => {
             console.log("Du hast es geändert");
+            console.log(checkBoxElement.checked);
+            // Aufpassen klasse hinzufügen wenn es geändert wurde.
+            if (checkBoxElement.checked === true) {
+                liElement.classList.add("completed");
+                console.log(checkBoxElement.checked);
+            } else {
+                liElement.classList.remove("completed");
+                console.log(checkBoxElement.checked);
+            }
+        });
+
+        // Event Listener auf Klick einbauen und dann entfernen
+        destroyButtonElement.addEventListener("click", () => {
+            console.log("Es wird zerstört");
+            liElement.remove();
         });
     };
 
