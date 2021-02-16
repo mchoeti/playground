@@ -1,6 +1,6 @@
 //"use strict";
 /*jshint esversion: 6 */
-// Mit STRG und Leertaste gibts die Autocomplete   
+// Mit STRG und Leertaste gibts die Autocomplete  // kleine Update 
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Simpler Hallo Welt Check");
@@ -102,5 +102,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
+// Git update
 });
