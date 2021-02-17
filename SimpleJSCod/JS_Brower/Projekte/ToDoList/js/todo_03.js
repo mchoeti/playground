@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 todoCounter++;
             }
         }
-        // einfacher wäre es wenn wir das mit einerm one linemachen aber das geht noch nicht
+        // einfacher wäre es wenn wir das mit einerm one linemachen aber das geht noch nicht wäre dann halt auch ein komplexer CSS Selector
         //todoListItem.querySelectorAll("li:not(.completed)").length;
         todoCountElement.innerText = todoCounter;
     };
