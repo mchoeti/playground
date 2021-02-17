@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Simpler Hallo Welt Check");
     const neuesToDo = document.querySelector(".new-todo");
     const todoListElement = document.querySelector(".todo-list");
+    // Ansteuern des Strong Elementes auch wenn Strong keien eigene Klasse hat
+    const todoCountElement = document.querySelector(".todo-count strong");
+
 
     const footerElement = document.querySelector(".footer");
     const refreshFooter = () => {
@@ -14,7 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             footerElement.style.display = "";
         }
+        // Anzahl der noch zu erledigen Todos berechnen
+        let todoCounter = 0;
+        for (const todoListItem of todoListElement.children) {
+            if (!todoListItem.classList.contains("completed")) {
+                todoCounter++;
+            }
+        }
+        // einfacher wäre es wenn wir das mit einerm one linemachen aber das geht noch nicht
+        //todoListItem.querySelectorAll("li:not(.completed)").length;
+        todoCountElement.innerText = todoCounter;
     };
+
+
+
+
 
     // Und natürlich noch aufrufen
     refreshFooter();
