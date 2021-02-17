@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //const removeFilters = document.querySelector(".filters");
 
     // Ziel: Nach checken der Buttons soll eine Aktion ausgeführt werden
+    // Hier wird eine Funktion definiert welches ein Argument erfordert. Siehe dazu line 80
     const addCallbacksForLi = (liElement) => {
         // Mal schauen was da alles möglich ist beginnend mit CLG
         console.log(liElement.innerHTML);
@@ -102,5 +103,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-// Git update
+    // Git update
 });
