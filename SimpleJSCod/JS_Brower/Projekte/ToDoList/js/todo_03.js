@@ -1,6 +1,6 @@
 //"use strict";
 /*jshint esversion: 6 */
-// Mit STRG und Leertaste gibts die Autocomplete  // kleine Update 
+// Mit STRG und Leertaste gibts die Autocomplete  // kleine Update
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Simpler Hallo Welt Check");
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const todoListElement = document.querySelector(".todo-list");
     // Ansteuern des Strong Elementes auch wenn Strong keien eigene Klasse hat
     const todoCountElement = document.querySelector(".todo-count strong");
-
+    const clearCompletedElement = document.querySelector(".clear-completed");
 
     const footerElement = document.querySelector(".footer");
     const refreshFooter = () => {
@@ -25,17 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         // einfacher wäre es wenn wir das mit einerm one linemachen aber das geht noch nicht wäre dann halt auch ein komplexer CSS Selector
-        //todoListItem.querySelectorAll("li:not(.completed)").length;
+        //let todoCounter = todoListItem.querySelectorAll("li:not(.completed)").length;
         todoCountElement.innerText = todoCounter;
+
+        let completedCounter = todoListElement.querySelectorAll("li.completed")
+            .length;
+        console.log(completedCounter);
+        if (completedCounter === 0) {
+            clearCompletedElement.style.display = "none";
+        } else {
+            clearCompletedElement.style.display = "";
+        }
     };
-
-
-
-
 
     // Und natürlich noch aufrufen
     refreshFooter();
-
 
     //const removeFilters = document.querySelector(".filters");
     // Ziel: Nach checken der Buttons soll eine Aktion ausgeführt werden
@@ -66,37 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Es wird zerstört");
             liElement.remove();
 
-            // Footer wieder ausblenden 
+            // Footer wieder ausblenden
             refreshFooter();
         });
     };
-
 
     // Check ob Enter Taster oder nicht
     neuesToDo.addEventListener("keypress", (event) => {
         console.log(event.code);
         // Nur Elemente mit Wert sollen hinzugefügt werden
-        if (event.code === "Enter" && neuesToDo.value !== ("")) {
+        if (event.code === "Enter" && neuesToDo.value !== "") {
             console.log("Es ist die Enter Taste");
             //alert("Enter wurde gedrückt");
 
             // Nun muss HTML Struktur mit JS erzeugt werden.
-            // Zuerst Button dann label und input class 
-            // Dann das in ein DIV verpacken 
+            // Zuerst Button dann label und input class
+            // Dann das in ein DIV verpacken
             // und dass dann in ein LI verpacken
-            const newButtonElement = document.createElement('button');
+            const newButtonElement = document.createElement("button");
             newButtonElement.classList.add("destroy");
             console.log(newButtonElement);
 
             // Neues Label Element
-            const newLabelElement = document.createElement('label');
-            newLabelElement.appendChild(
-                document.createTextNode(neuesToDo.value)
-            );
+            const newLabelElement = document.createElement("label");
+            newLabelElement.appendChild(document.createTextNode(neuesToDo.value));
             console.log(newLabelElement);
 
             // Neue CheckBox und Klasse vergeben - Neues Input ELement , type checkbox zuweisen und dann classe toggle vergeben
-            const newInputCheckbox = document.createElement('input');
+            const newInputCheckbox = document.createElement("input");
             newInputCheckbox.type = "checkbox";
             newInputCheckbox.classList.add("toggle");
 
@@ -111,33 +112,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const newListElement = document.createElement("li");
             newListElement.appendChild(newDivElement);
 
-            // Lektion 2 neu hinzufügen Wichtig dass hier schon alle Div Elemente drinnen sind siehe newListElement.appendChild(newDivElement); 
+            // Lektion 2 neu hinzufügen Wichtig dass hier schon alle Div Elemente drinnen sind siehe newListElement.appendChild(newDivElement);
             addCallbacksForLi(newListElement);
 
-            //Und Jetzt mit Prepend als erste hinzufügen 
+            //Und Jetzt mit Prepend als erste hinzufügen
             //todoListElement.prepend(newListElement);
             // oder mit APPEND hinten anhängen
             todoListElement.append(newListElement);
             //todoListElement.prepend(newLiElement);
 
-
-
             // Danach Wert wieder zurücksetzen
             neuesToDo.value = "";
             // FOOTer Funktion verwenden fürs wieder einblenen
             refreshFooter();
-
-            // Dieses HTML Element muss ich mit JS erstellen, also LI , div , input , label und button
-            /* <li>
-                    <div class="view">
-                        <input class="toggle" type="checkbox">
-                        <label>Buy a unicorn or 2</label>
-                        <button class="destroy"></button>
-                    </div>
-                </li> */
-
         }
-    });
 
-    // Git update
+        // Completed Elements wegklicken bzw. etnfernen mit Click
+        clearCompletedElement.addEventListener("click", (event) => {
+            const completedListElements = todoListElement.querySelectorAll(
+                "li.completed"
+            );
+            for (const completedListElement of completedListElements) {
+                completedListElement.remove();
+            }
+            // Nochmals ein Footer Refresh
+            refreshFooter();
+        });
+    });
 });
