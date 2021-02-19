@@ -27,3 +27,7 @@ for (var i = 5; i <= 7; i++) {
 
 data.printTodos();
 //console.log(data);
+
+
+// ZWecks this
+// https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/this
