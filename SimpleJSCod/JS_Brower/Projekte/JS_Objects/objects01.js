@@ -12,20 +12,21 @@ const data = {
         // this ist also der Kontext der Funktion
         //data.todos.push(Argument);
         this.todos.push(Argument);
+        this.printTodos(Argument);
     },
     printTodos: function() {
-        console.log(this.todos);
+        console.log("Meine Todos", this.todos);
     }
 };
 
-data.addTo("3. TO Do");
-data.addTo("4. TO Do");
+//data.addTo("3. TO Do");
+//data.addTo("4. TO Do");
 
-for (var i = 5; i <= 7; i++) {
+for (var i = 3; i <= 7; i++) {
     data.addTo([i] + ".es TO Do");
 }
 
-data.printTodos();
+//data.printTodos();
 //console.log(data);
 
 
