@@ -10,7 +10,7 @@ setTimeout(() => {
 }, 5000);
 
 setInterval(() => {
-    console.log("Ich werde alle 2000ms ausgeführt");
-}, 2000);
+    console.log("Ich werde alle 3000ms ausgeführt");
+}, 3000);
 
 /// https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Functions/Pfeilfunktionen
