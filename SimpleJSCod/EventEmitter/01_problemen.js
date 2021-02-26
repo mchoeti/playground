@@ -15,11 +15,25 @@ const bankModule = {
     }
 };
 
+const dsgvoModule = {
+    shipLetter(name) {
+        console.log("Datenschutz für " + name);
+    }
+};
+
 // Neuen Studenten hinzufügen
 const name = "Stefan Super";
 studentModule.addStudent(name);
 bankModule.chargeStudent(name);
+dsgvoModule.shipLetter(name);
 
 // Mal alle Studtenten ausgeben
+console.log(studentModule);
+console.log(studentModule.students);
+
+const online = "Stefan Super Online";
+studentModule.addStudent(online);
+bankModule.chargeStudent(online);
+
 console.log(studentModule);
 console.log(studentModule.students);
