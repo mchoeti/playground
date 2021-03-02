@@ -87,10 +87,16 @@ function moveInvaders() {
 
     draw();
     if (squares[currentShooterIndex].classList.contains("invaders", "shooter")) {
-        resultDisplay.innerHTML = "Game Over";
+        resultDisplay.innerHTML = "GAME OVER !!! ";
         console.log("game over!");
         clearIntervall(invadersID);
 
+    }
+
+    for (let i = 0; i < alienInvaders.length; i++) {
+        if (alienInvaders[i] > squares.length) {
+            resultDisplay.innerHTML = "GAME OVER !!! ";
+        }
     }
 
 }
