@@ -1,6 +1,7 @@
 //"use strict";
 /*jshint esversion: 6 */
 const grid = document.querySelector('.grid');
+const resultDisplay = document.querySelector('.results');
 let currentShooterIndex = 202;
 let width = 15;
 let direction = 1;
@@ -85,6 +86,13 @@ function moveInvaders() {
     }
 
     draw();
+    if (squares[currentShooterIndex].classList.contains("invaders", "shooter")) {
+        resultDisplay.innerHTML = "Game Over";
+        console.log("game over!");
+        clearIntervall(invadersID);
+
+    }
+
 }
 
-invadersID = setInterval(moveInvaders, 500)
+invadersID = setInterval(moveInvaders, 100)
