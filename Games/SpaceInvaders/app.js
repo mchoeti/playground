@@ -25,6 +25,8 @@ squares[currentShooterIndex].classList.add('shooter');
 
 function moveShooter(e) {
     squares[currentShooterIndex].classList.remove('shooter');
+    // Einbauen des Tastendrucks checken 
+    console.log(e.code);
     switch (e.key) {
         case "ArrowLeft":
             if (currentShooterIndex % width !== 0) currentShooterIndex -= 1
@@ -32,12 +34,12 @@ function moveShooter(e) {
         case "ArrowRight":
             if (currentShooterIndex % width < width - 1) currentShooterIndex += 1;
             break;
-        case "Return":
-            console.log("Das war aber jetzt die Return Taste");
+        case "ArrowDown":
+            console.log("Das war aber jetzt die Pfeil nach Unten Taste");
+            //console.log(e.value);
             break;
-    };
+    }
     squares[currentShooterIndex].classList.add('shooter');
 }
 
 document.addEventListener('keydown', moveShooter);
-// document.addEventListener('keydown', console.log(keydown));
