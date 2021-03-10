@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is a H1 Title</h1>
+
+    <script>
+        var textToDisplay = "Hello, world!";
+        document.write("h2" + textToDisplay + "</h2>");
+
+
+        // und wieder mal wenn man abziehen will muss man -= verwenden, siehe Beispiel
+        // for (var counter = 30; counter >= 2; counter -= 4) {
+        //     document.write("<h1>" + "Und noch ein neuer Loop " + "</h1>");
+        //     document.write("<h2>" + "Counter is now " + counter + " " + textToDisplay + "</h2>");
+
+        // var counter = 100
+        // while (counter < 1000) {
+        //     document.write("<h1>" + "Und noch ein neuer Loop " + "</h1>");
+        //     document.write("<h2>" + "Counter is now " + counter + " " + textToDisplay + "</h2>");
+        //     counter += 177;
+        //     console.log(counter);
+        // }
+
+        // mal einen schnellen Loop mit true false
+        var counter = 100
+        var shouldContinue = true;
+        while (shouldContinue) {
+            document.write("<h1>" + "Und noch ein neuer Loop " + "</h1>");
+            document.write("<h2>" + "Counter is now " + counter + " " + textToDisplay + "</h2>");
+            counter += 177;
+            if (counter > 500) {
+                shouldContinue = false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

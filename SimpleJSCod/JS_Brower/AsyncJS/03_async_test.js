@@ -4,7 +4,7 @@
 const data = {
     students: ["Max", "Moritz"],
     numberOfStudents: 2
-}
+};
 
 if (data.numberOfStudents <= 2) {
     data.students.push("Erika");
