@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is my exercise page</h1>
+
+    <script>
+        var textToDisplay = "LEARN !!!!";
+        document.write("<h2>" + textToDisplay + "</h2>");
+
+        // Ich brauch mal ein paar Sterne
+        var num_rows = 7;
+        for (var row = 0; row < num_rows; row++) {
+            //console.log("row Number", row);
+            var toPrint = "#";
+            for (var column = 0; column < row; column++) {
+                toPrint += "#";
+            }
+            console.log(toPrint);
+        }
+
+        console.log("Let the FIZ BUZZ in yout heart !!");
+        for (let n = 1; n <= 30; n++) {
+            let output = "";
+            if (n % 3 == 0) output += "Fizz";
+            if (n % 5 == 0) output += "Buzz";
+            console.log(output || n);
+        }
+    </script>
+
+</body>
+
+</html>

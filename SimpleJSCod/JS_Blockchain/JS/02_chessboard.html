@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is my exercise page</h1>
+
+    <script>
+        var textToDisplay = "LEARN !!!!";
+        document.write("<h2>" + textToDisplay + "</h2>");
+
+        let size = 8;
+
+        let board = "";
+
+        for (let y = 0; y < size; y++) {
+            for (let x = 0; x < size; x++) {
+                if ((x + y) % 2 == 0) {
+                    board += " ";
+                } else {
+                    board += "#";
+                }
+            }
+            board += "\n";
+        }
+
+        console.log(board);
+    </script>
+
+</body>
+
+</html>

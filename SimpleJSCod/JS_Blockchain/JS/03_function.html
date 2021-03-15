@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is my exercise page</h1>
+
+    <script>
+        function greeting(name, numberOfBooks, isSunny) {
+            document.write("<h1> Servas " + name + "</h1>" + "How is your day " + name);
+            document.write("<h2> Btw..  I have " + numberOfBooks + " books</h2>");
+            if (isSunny == true) {
+                document.write("<h3> It is soooooooooooooo cool </h3");
+            } else {
+                document.write("<h2> ..........wtf  ... it is raining </h2");
+            };
+        }
+
+
+        greeting("Christl", 200, true);
+        greeting("Elsa", 123, false);
+    </script>
+
+</body>
+
+</html>
