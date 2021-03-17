@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Ich bin a super Überschrift</h1>
+    <h1 id="headingTwo">Ich bin auch a tolle Überschrift</h1>
+    <!-- h2*4>lorem10 -->
+
+    <p class="simplerParagraph">Lorem ipsum dolor sit.</p>
+    <p class="simplerParagraph">Perspiciatis consectetur quibusdam similique.</p>
+    <p>Ab ut eum sunt!</p>
+
+
+
+    <script>
+        function makeConsole() {
+            console.log("Oida this is an Conscole ALERT !!!")
+            document.write("<h2> WOHOOOOOOOOOOOO <br> check die Console </h2>")
+        }
+        //setTimeout(makeConsole, 2000);
+
+        function doNumberOfTimes(toDo, number) {
+            for (var count = 0; count < number; count++) {
+                toDo();
+                console.log(count);
+            }
+        }
+
+        function randomFunction() {
+            console.log("HI");
+        }
+
+        // Also wird das Ding so oft ausgeführt, so oft wie die Zahlen ausführen
+        doNumberOfTimes(randomFunction, 4);
+    </script>
+
+</body>
+
+</html>
