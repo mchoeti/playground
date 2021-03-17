@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Ich bin a super Überschrift</h1>
+    <h1 id="headingTwo">Ich bin auch a tolle Überschrift</h1>
+    <!-- h2*4>lorem10 -->
+
+    <p class="simplerParagraph">Lorem ipsum dolor sit.</p>
+    <p class="simplerParagraph">Perspiciatis consectetur quibusdam similique.</p>
+    <p>Ab ut eum sunt!</p>
+
+
+
+    <script>
+        var cars = ["bmw", "Franzose", "VW", "Mercl"];
+        console.log(cars);
+        /* Wieder mit JQuery hier ein Beispiel: https://api.jquery.com/jQuery.each/#jQuery-each-array-callback
+         $.each([ 52, 97 ], function( index, value ) {
+             alert( index + ": " + value );
+             });*/
+        $.each(cars, function(index, value) {
+            console.log("Ausgabe mit JQery " + index + " : " + value);
+        })
+    </script>
+
+</body>
+
+</html>
