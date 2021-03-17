@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Ich bin a super Überschrift</h1>
+    <h1 id="headingTwo">Ich bin auch a tolle Überschrift</h1>
+    <!-- h2*4>lorem10 -->
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repellat.</h2>
+    <h2>Cumque, molestiae amet culpa minima odio temporibus sapiente beatae dolor!</h2>
+    <h2>Expedita consectetur porro, necessitatibus doloremque excepturi aliquam delectus temporibus debitis.</h2>
+    <h2>Reprehenderit quasi saepe corrupti sunt dolorum non nemo debitis explicabo?</h2>
+
+    <p class="simplerParagraph">Lorem ipsum dolor sit.</p>
+    <p class="simplerParagraph">Perspiciatis consectetur quibusdam similique.</p>
+    <p>Ab ut eum sunt!</p>
+    <p>Perferendis at provident explicabo?</p>
+    <p>Debitis laudantium in aspernatur.</p>
+    <p>Saepe dolor sapiente minima.</p>
+
+    <button type="button" id="myButton">This is my Button</button>
+    <br>
+    <h3>A bisserl was zum Nachdenken Eintippen und ausgeben</h3>
+    <input type="text" name="emptyTextBox" id="myTextbox" placeholder="schreib was rein hey">
+    <button type="button" id="myButtonForText">Zeig mir den Input</button>
+
+
+    <script>
+        // now i add some Jquery Functions
+        // Hide all the h2 element
+        $("h2").hide();
+        // Remember an ID is only ONE Element. Habe ich mehrere sollte ich Klassen verwenden 
+        $("#headingTwo").hide();
+        // und hier blende ich all Element mit der Klasse simplerParagraph aus
+        $(".simplerParagraph").hide();
+
+
+        // Response auf den Button Click
+        $("#myButton").click(function() {
+            // Führe also folgenden Code aus
+            alert("Oida du hast den Button geklickt !!!")
+            console.log("Button clicked");
+        });
+
+        // Für den Button
+        $("#myButtonForText").click(function() {
+            // Damit wird die ID myTextbox angesprochen und ich besorge mit den wert mit val();
+            var textInputted = $("#myTextbox").val();
+            console.log("Hier sollte dein Input stehen: " + textInputted);
+            // oder 
+            alert(textInputted);
+        });
+
+        /* The .val() method is primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined.
+         */
+
+        $("#myTextbox").mouseover(function() {
+            // Führe also folgenden Code aus
+            //alert("Oida du hast den Button geklickt !!!")
+            console.log("Hier kam die Maus");
+        });
+    </script>
+
+</body>
+
+</html>
