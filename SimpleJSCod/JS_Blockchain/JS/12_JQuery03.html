@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>My favorites fruits</h1>
+    <ol id=fruitlist></ol>
+    <input id="fruitTextInput" type="text" name="emptyTextBox" placeholder="Bitte Früchte eingeben">
+    <button id="addFruitButton" type="button">Frucht hinzufügen</button>
+
+    <script>
+        // JQuery is mehr für lernen 
+        // Besser wäre Angular und REACT daher mal zuerst JQuery checken als Basis
+
+        var fruits = ["Apple", "Banana", "Orange", "Pepper"];
+        // Nicht vergessen, ID mit # und eine KLasse mit . definieren
+
+        // Um das immer upzudaten können wir ja eine Funktion bauen 
+        function redrawList() {
+            var list = $("#fruitlist");
+            // Liste leeren sonst wird es immer nur hinzugefügt
+            list.html("");
+            $.each(fruits, function(index, value) {
+                // console.log("Mal durchloopen", index, value);
+                // das geht auch , eben simpler 
+                $("<li/>").text(value).appendTo(list);
+            })
+        }
+        // Hier wird gleich mal der Inhalt vom Array ausgegeben - Nur bestehendes
+        redrawList();
+
+        // Input vom USer abfragen und gleich mal prüfen
+        $("#addFruitButton").click(function() {
+            // Damit wird die ID fruitTextInput angesprochen und ich besorge mit den wert mit val();
+            var fruitText = $("#fruitTextInput").val();
+            console.log("Hier sollte dein Input stehen: " + fruitText);
+            // Hinzufügen mit Push 
+            fruits.push(fruitText);
+            // Crosscheck, aufpassen klappe erst NACH Eingabe und NACHDEM der Button gedrückt wurde
+            console.log(fruits);
+            // Wenn also eine Eingabe kommt, nochmals ausführen 
+            redrawList();
+        });
+
+
+        console.log(fruits);
+    </script>
+
+</body>
+
+</html>
