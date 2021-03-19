@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="14_logic.js"></script>
+</head>
+
+<body>
+
+    <h1 id="myTitle">My favorites fruits - old Title</h1>
+    <ol id=fruitlist></ol>
+    <!-- Input Felder zwecks Definition -->
+    <button id="theButton" type="button ">Hello</button>
+
+    <script>
+        // this is a simple CallbackFunction  - Also was wir einem Event geben.
+        // Wir warten also auf was .. Kann aber auch ein Timeout sein 
+        $("#theButton").click(function() {
+            console.log("ClickidiClack");
+        })
+
+        function constructTimeoutPromise() {
+            // Wenn ok wir machen ein resolve ();
+            // Wenn es nich klappt, dann nehmen wir halt reject();
+            return new Promise(function(resolve, reject) {
+                setTimeout(resolve, 2000);
+            })
+        }
+
+        // Besser
+        constructTimeoutPromise().then(function() {
+            console.log("Connection to Database");
+            return constructTimeoutPromise();
+        }).then(function() {
+            console.log("Readind from Database");
+            return constructTimeoutPromise();
+        }).then(function() {
+            console.log("Structuring Data");
+            return constructTimeoutPromise();
+        }).then(function() {
+            console.log("Inirialisiing Data");
+            return constructTimeoutPromise();
+        }).then(function() {
+            console.log("Send data");
+            return constructTimeoutPromise();
+        }).then(function() {
+            console.log("Jetzt is aber aus");
+            return constructTimeoutPromise();
+        })
+
+
+        // Deppert oder ?
+        // setTimeout(function() {
+        //     console.log("Connection to Database");
+        //     setTimeout(function() {
+        //         console.log("Reading to Database");
+        //         setTimeout(function() {
+        //             console.log("Structure Data");
+        //             setTimeout(function() {
+        //                 console.log("Sending Data");
+        //                 setTimeout(function() {
+        //                     console.log("Blbbalbalablabl");
+        //                 }, 2000)
+        //             }, 2000)
+        //         }, 2000)
+        //     }, 2000)
+        // })
+
+        console.log("But i am FIRST ");
+
+        // setTimeout(function() {
+        //     alert("Helloooooooooooooooo")
+        // }, 2000)
+    </script>
+
+</body>
+
+</html>
