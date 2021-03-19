@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        var car1 = {
+            hersteller: "Volvo",
+            year: 2009,
+            distance: 100000
+        };
+        // könnte aber auch ein Array enthalten 
+        car1.testArray = [1, 2, 3, 4];
+
+        // Console Function mal ausführen 
+        function consoling() {
+            console.log("Ich bin eine simple ConsolenFunction");
+        }
+
+        // Oder abt auch gleich die Function ausführen
+        var car2 = {
+            hersteller: "Merc",
+            year: 2010,
+            distance: 200000,
+            consoleFunctionTest: consoling
+        };
+        var car3 = {
+            hersteller: "BMWW",
+            year: 2011,
+            distance: 300000,
+            // oder eine uFunktion
+            alertFunction: function() {
+                alert("Ich bin ein Alert")
+            }
+        };
+
+        // Manipulieren
+        car1.hersteller = "Renault";
+        car1.numberWheels = 4;
+        var cars = [car1, car2, car3];
+
+        // Logen und Testen
+        console.log(cars)
+            // Einfach mal Zugreifen 
+        console.log(cars[0].hersteller);
+        // Alert Function ausführen 
+        car3.alertFunction();
+        car2.consoleFunctionTest();
+    </script>
+
+</body>
+
+</html>
