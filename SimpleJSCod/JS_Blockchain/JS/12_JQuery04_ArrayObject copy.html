@@ -15,8 +15,8 @@
     <ol id=fruitlist></ol>
     <!-- Input Felder zwecks Definition -->
     <input id="fruitNameInput" type="text" placeholder="Type the Name" />
-    <input id="fruitWeightInput" type="text " placeholder="Type the color " />
-    <input id="fruitColorInput" type="text " placeholder="Gewicht " />
+    <input id="fruitColorInput" type="text " placeholder="Farbe" />
+    <input id="fruitWeightInput" type="text " placeholder="Gewicht" />
     <button id="addFruitButton" type="button ">Frucht hinzufügen</button>
 
     <script>
@@ -57,7 +57,7 @@
             var fruitsObject = {
                 name: fruitName,
                 color: fruitColor,
-                weight: fruitWeight
+                weight: parseInt(fruitWeight)
             };
 
             // Hinzufügen mit Push 
