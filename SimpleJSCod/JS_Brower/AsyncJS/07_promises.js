@@ -1,23 +1,26 @@
 //"use strict";
 /*jshint esversion: 6 */
 
-const fs = require("fs");
+//const fs = require("fs");
 
-// Versprechen das hier ein Wert drinnen stehen wird !!! 
-const p = Promise.resolve("Hallo ZUsammen");
+// Versprechen das hier ein Wert drinnen stehen wird !!!
+//const p = Promise.resolve("Hallo Zusammmen");
 
+// Versprechen wir noch nicht eingelöst. Nur wenn was drinnensteht wird sie ausgeführt
+const p = new Promise(() => {});
 
-// A bisserl strange ode ? Set Timeout und die sogenannte Callback HELL!!!!
-// setTimeout(() => {
-//     fs.exists("datei.txt", (exists) => {
-//         if (exists) {
-//             fs.readFile("datei.txt", { encoding: "utf8" }, (err, data) => {
-//                 // Wenn kein Fehlerm , also err dann kommen immmer die Daten Variablennamen is wurscht. Ich verwende hier data
-//                 console.log("err", err);
-//                 console.log("Daten: ", data);
-//             });
-//         }
-//     });
-// }, 1000);
+p.then((value) => {
+    console.log("Das is mal eine Begrüßung : ", value);
+});
 
-// Deswegen brauchen wir die promises
+// Hier wird ein Versprechen eingelöst.
+const q = new Promise((resolve, reject) => {
+    // Usus : immer die Variablen oben verwenden ist best practise.
+    setTimeout(() => {
+        resolve("HALLOOOOOOOOOOOOOOOOO");
+    }, 2000);
+});
+
+q.then((value) => {
+    console.log("Das is mal eine Begrüßung : ", value);
+});
