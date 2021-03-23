@@ -14,17 +14,18 @@
     <h1>Ich bin a super Überschrift</h1>
     <h1 id="headingTwo">Ich bin auch a tolle Überschrift</h1>
     <!-- h2*4>lorem10 -->
+    <button type="button" id="myButtonForText">Turn the music on</button>
 
     <p class="simplerParagraph">Lorem ipsum dolor sit.</p>
     <p class="simplerParagraph">Take on me.. :-) - AHA</p>
-    <p class="simplerParagraph">Perspiciatis consectetur quibusdam similique.</p>
+    <p id="toChange" class="simplerParagraph">Perspiciatis consectetur quibusdam similique.</p>
     <p>Ab ut eum sunt!</p>
 
 
 
     <script>
         function makeConsole() {
-            console.log("Oida this is an Conscole ALERT !!!")
+            console.log("Oida this is an Console ALERT !!!")
             document.write("<h2> WOHOOOOOOOOOOOO <br> check die Console </h2>")
         }
         //setTimeout(makeConsole, 2000);
@@ -39,6 +40,12 @@
         function randomFunction() {
             console.log("HI");
         }
+
+        $("#myButtonForText").mouseover(function() {
+            $("#toChange").text("Mal was neues");
+            console.log("Text wurde geände");
+
+        });
 
         // Also wird das Ding so oft ausgeführt, so oft wie die Zahlen ausführen
         doNumberOfTimes(randomFunction, 4);
