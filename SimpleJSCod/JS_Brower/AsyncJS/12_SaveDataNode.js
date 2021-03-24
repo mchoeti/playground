@@ -2,15 +2,22 @@
 /*jshint esversion: 6 */
 //const fs = require("fs");
 
-// Simpler API Call mit Axios , wo ich mir heute und morgen ein paar Daten abhole
+// Step One mal abholen was es gibt aus einem File 
 const fs = require("fs");
-var words = fs.readFileSync("words.json");
+var data = fs.readFileSync("words.json");
+// Damit das File auch als JSON gelesen wird
+var words = JSON.parse(data);
 console.log(words);
 
 
+fs.writeFile("word.json", words, finished);
+
+function finished(err) {
+    console.log("Ready samma");
+}
 
 
-var express = require("express");
+// var express = require("express");
 // var app = express();
 // var server = app.listen(3000, listening);
 

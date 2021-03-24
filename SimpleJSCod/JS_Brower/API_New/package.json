@@ -1,0 +1,15 @@
+{
+  "name": "api_new",
+  "version": "1.0.1",
+  "description": "Mal was neues, kleines Update und neue API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
