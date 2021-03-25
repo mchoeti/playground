@@ -30,11 +30,14 @@ app.use(express.static('website'));
  http://localhost:3000/search/Blumen/50
 */
 
-app.get('/search/:flower/:num', sendFlower);
+//app.get('/search/:flower/:num', sendFlower);
 // neue Line
 //app.get('/add/:word/:score', addWord);
+app.get('/search/:flower/:num', sendFlower);
 // Option würde das mit einem Fragezeichen klappen 
 app.get('/add/:word/:score?', addWord);
+// Adding Search Function
+app.get('/search/:word/', searchWord);
 
 function addWord(request, response) {
     //response.send(console.log("HAllo"));
@@ -62,6 +65,24 @@ function addWord(request, response) {
     response.send(reply);
 }
 
+// Suchfuntion überprüft ob es da was gibt
+function searchWord(request, response) {
+    var word = request.params.word;
+    var reply;
+    if (words[word]) {
+        reply = {
+            status: "Found !!!!",
+            word: word,
+            score: words[word]
+        };
+    } else {
+        reply = {
+            status: " Not Found !!!!",
+            word: word
+        };
+    }
+    response.send(reply);
+}
 
 function sendFlower(request, response) {
     var data = request.params;
@@ -71,7 +92,6 @@ function sendFlower(request, response) {
         antwort += "I love " + data.flower + "  auch";
     }
     response.send(antwort);
-
     //response.send("I love " + data.flower + "  auch");
 }
 
@@ -81,31 +101,3 @@ app.get('/all', sendAll);
 function sendAll(request, response) {
     response.send(words);
 }
-
-
-/*
-
-// Step One mal abholen was es gibt aus einem File 
-const fs = require("fs");
-var data = fs.readFileSync("words.json");
-// Damit das File auch als JSON gelesen wird
-var words = JSON.parse(data);
-console.log(words);
-
-
-fs.writeFile("word.json", words, finished);
-
-function finished(err) {
-    console.log("Ready samma");
-}
-
-
-// var express = require("express");
-// var app = express();
-// var server = app.listen(3000, listening);
-
-// function listening() {
-//     console.log(".............listeninge..............");
-// }
-
-*/
