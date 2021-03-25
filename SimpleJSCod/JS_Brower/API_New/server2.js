@@ -6,7 +6,8 @@ var words = {
     "rainbow": 5,
     "unicorn": 10,
     "doom": -5,
-    "tomato": 7
+    "tomato": 7,
+    "apple": 14
 };
 
 // SMoke Test
@@ -30,6 +31,29 @@ app.use(express.static('website'));
 */
 
 app.get('/search/:flower/:num', sendFlower);
+// neue Line
+//app.get('/add/:word/:score', addWord);
+// Option würde das mit einem Fragezeichen klappen 
+app.get('/add/:word/:score?', addWord);
+
+function addWord(request, response) {
+    //response.send(console.log("HAllo"));
+    var data = request.params;
+    var word = data.word;
+    // Mit Number() konvertiere ich den String auch gleiuch mal in eine Nummer
+    var score = Number(data.score);
+    // Wenn kein Score dann gliech mal einen standartwert setzen!!
+    if (!score) {
+        score = 0;
+    }
+    // Word is the key and score is the value
+    words[word] = score;
+    var reply = {
+        msg: "Danke für deinen Beitrag"
+    };
+    response.send(reply);
+}
+
 
 function sendFlower(request, response) {
     var data = request.params;
