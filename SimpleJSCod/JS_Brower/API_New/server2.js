@@ -43,14 +43,22 @@ function addWord(request, response) {
     // Mit Number() konvertiere ich den String auch gleiuch mal in eine Nummer
     var score = Number(data.score);
     // Wenn kein Score dann gliech mal einen standartwert setzen!!
+    var reply;
     if (!score) {
         score = 0;
+        words[word] = score;
+        reply = {
+            msg: "Std Score gesetzt"
+        };
+        //response.send(reply);
+    } else {
+        // Word is the key and score is the value
+        words[word] = score;
+        reply = {
+            msg: "Danke für deinen Beitrag"
+        };
+        //response.send(reply);
     }
-    // Word is the key and score is the value
-    words[word] = score;
-    var reply = {
-        msg: "Danke für deinen Beitrag"
-    };
     response.send(reply);
 }
 
