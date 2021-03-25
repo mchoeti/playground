@@ -26,10 +26,12 @@ function listening() {
 app.use(express.static('website'));
 //app.get('/flower', sendFlower);
 /* 
- nicht vergessn im Brwoser muss man  halt nun auch die Adresse eingeben
+ nicht vergessn im Brwoser muss man halt nun auch die Adresse eingeben
  http://localhost:3000/search/Blumen/50
 */
 
+// Jetzt bauen wir mal neue API Werte dazu
+app.get('/all', sendAll);
 //app.get('/search/:flower/:num', sendFlower);
 // neue Line
 //app.get('/add/:word/:score', addWord);
@@ -95,8 +97,7 @@ function sendFlower(request, response) {
     //response.send("I love " + data.flower + "  auch");
 }
 
-// Jetzt bauen wir mal neue API Werte dazu
-app.get('/all', sendAll);
+
 
 function sendAll(request, response) {
     response.send(words);
