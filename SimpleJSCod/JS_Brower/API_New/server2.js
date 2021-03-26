@@ -2,13 +2,20 @@
 /*jshint esversion: 6 */
 //const fs = require("fs");
 
-var words = {
-    "rainbow": 5,
-    "unicorn": 10,
-    "doom": -5,
-    "tomato": 7,
-    "apple": 14
-};
+// var words = {
+//     "rainbow": 5,
+//     "unicorn": 10,
+//     "doom": -5,
+//     "tomato": 7,
+//     "apple": 14
+// };
+
+// Alternative anstelle der Hardcodierten Wörter .   https://nodejs.org/api/fs.html
+const fs = require("fs");
+var data = fs.readFileSync("words.json");
+var words = JSON.parse(data);
+console.log(words);
+
 
 // SMoke Test
 console.log("Server is starting");
@@ -59,6 +66,16 @@ function addWord(request, response) {
     } else {
         // Word is the key and score is the value
         words[word] = score;
+        var data = JSON.stringify(words)
+            // EInbauen für das Error Handling
+        fs.writeFile("words.json", words, finished);
+
+        function finished() {
+            console.log("Weil WriteFile nun mal irgendeine Funktion braucht. Siehe Docu");
+        }
+
+
+
         reply = {
             msg: "Danke für deinen Beitrag"
         };
@@ -96,8 +113,6 @@ function sendFlower(request, response) {
     response.send(antwort);
     //response.send("I love " + data.flower + "  auch");
 }
-
-
 
 function sendAll(request, response) {
     response.send(words);
