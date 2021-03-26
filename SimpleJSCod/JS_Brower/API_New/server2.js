@@ -66,16 +66,13 @@ function addWord(request, response) {
     } else {
         // Word is the key and score is the value
         words[word] = score;
-        var data = JSON.stringify(words)
-            // EInbauen für das Error Handling
-        fs.writeFile("words.json", words, finished);
+        var data = JSON.stringify(words);
+        // EInbauen für das Error Handling
+        fs.writeFile("words.json", data, finished);
 
         function finished() {
-            console.log("Weil WriteFile nun mal irgendeine Funktion braucht. Siehe Docu");
+            console.log("Dankeschön");
         }
-
-
-
         reply = {
             msg: "Danke für deinen Beitrag"
         };
