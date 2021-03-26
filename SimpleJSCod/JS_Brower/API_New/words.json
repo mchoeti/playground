@@ -1,1 +1,10 @@
-{"rainbow":5,"unicorn":10,"doom":-5,"tomato":7,"apple":14,"Hallo2":234}
+{
+  "rainbow": 5,
+  "unicorn": 10,
+  "doom": -5,
+  "tomato": 7,
+  "apple": 14,
+  "Hallo2": 234,
+  "JSON": 34,
+  "reply": 123
+}

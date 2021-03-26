@@ -66,19 +66,24 @@ function addWord(request, response) {
     } else {
         // Word is the key and score is the value
         words[word] = score;
-        var data = JSON.stringify(words);
+        // Dann noch als JSON umbauen
+        var data = JSON.stringify(words, null, 2);
         // EInbauen für das Error Handling
         fs.writeFile("words.json", data, finished);
 
         function finished() {
             console.log("Dankeschön");
+            reply = {
+                word: word,
+                score: score,
+                status: "Success"
+            };
+            response.send(reply);
         }
-        reply = {
-            msg: "Danke für deinen Beitrag"
-        };
+
         //response.send(reply);
     }
-    response.send(reply);
+    //response.send(reply);
 }
 
 // Suchfuntion überprüft ob es da was gibt
