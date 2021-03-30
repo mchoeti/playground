@@ -1,12 +1,39 @@
 function setup() {
     createCanvas(400, 400);
-    background(51);
-    loadJSON('all', gotData);
+    //    background(51);
+    drawData();
     console.log("hallo from JS File");
+
+    // in P5 mit einer Select funktion
+    var button = select('#submitt');
+    button.mousePressed(submitWord);
+
+    function drawData() {
+        loadJSON('all', gotData);
+
+    }
+
+    function submitWord() {
+        console.log("Jetzt aber mit P5 Funktionen");
+        var word = select('#word').value();
+        var score = select('#score').value();
+        // mal schauen ob wir uns die Dazrn von den HTML Elementen mit den ID`s abholen können
+        console.log(word, score);
+        // no we only have add those elements with using OUR API
+        loadJSON("add/" + word + "/" + score, finished);
+
+        function finished(data) {
+            console.log(data);
+            // Wenn ein WOrt übermittelt wird dann kommt natülich nohmals die Funktion hinzu
+            drawData();
+        }
+    }
 }
 
 // Daten die von der Resource / all kommen
 function gotData(data) {
+    // Nochmals den Background neu zeichnen
+    background(51);
     console.log(data);
     var keys = Object.keys(data);
     console.log(keys);
@@ -34,6 +61,15 @@ function gotData(data) {
     });
 
 }
+
+// JEDER JQUERY Code muss hier rein. Sonst klappt das nicht
+$(document).ready(function() {
+    // all custom jQuery will go here
+    $("h1").hide();
+    $("#submitt").mouseover(function() {
+        console.log("Über den Button gefahren");
+    });
+});
 
 // mal mit einer FOr Eahch probieren
 // keys.forEach(element => {
