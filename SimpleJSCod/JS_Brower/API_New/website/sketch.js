@@ -68,9 +68,6 @@ $(document).ready(function() {
     $("h1").hide();
     $("#submitt").mouseover(function() {
         console.log("Über den Button gefahren");
-        // $("#fade1").fadeIn();
-        // $("#fade2").fadeIn("slow");
-        // $("#fade3").fadeIn(3000);
         $("p").append("I love JQuery");
         $("p").append("I love JQuery x 2");
         $("p").append("I love JQuery oder so ");
