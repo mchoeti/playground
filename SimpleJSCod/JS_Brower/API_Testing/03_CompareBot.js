@@ -30,8 +30,8 @@ CryptoCompareAPI.setApiKey(ccAPIKey);
 
 CryptoCompareAPI.priceHistorical('BTC', ['USD', 'EUR'], new Date('2021-01-01'))
     .then(prices => {
-        console.log(prices)
-            // -> { BTC: { USD: 997, EUR: 948.17 } }
+        console.log(prices);
+        // -> { BTC: { USD: 997, EUR: 948.17 } }
     })
     .catch(console.error);
 
