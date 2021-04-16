@@ -30,11 +30,11 @@ module.exports = {
                 //console.log(data.length);
                 var movingAverage = sum / hours;
                 callback(movingAverage);
-                console.log(movingAverage);
+                console.log("From Indicators Hour: ", movingAverage);
             })
             .catch(console.error);
     },
-    minuteMovingAverage: function(cryptoAsset, fiatCurrency, callback) {
+    minuteMovingAverage: function(cryptoAsset, fiatCurrency, minutes, callback) {
 
         CryptoCompareAPI.histoMinute(cryptoAsset, fiatCurrency)
             .then((data) => {
@@ -42,14 +42,14 @@ module.exports = {
 
                 // Schritt 2 ist eben den MA zu berechnen
                 var sum = 0;
-                for (var i = 0; i < hours; i++) {
+                for (var i = 0; i < minutes; i++) {
                     //console.log(i);
                     //console.log(data[i].close);
                     sum += data[i].close;
                 }
-                var movingAverage = sum / hours;
-                callback(movingAverage);
-                console.log(movingAverage);
+                var minMovingAverage = sum / minutes;
+                callback(minMovingAverage);
+                console.log("From Indicators: ", minMovingAverage);
             })
             .catch(console.error);
     },

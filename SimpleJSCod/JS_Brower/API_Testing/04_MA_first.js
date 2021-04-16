@@ -7,7 +7,6 @@ const GeminiAPI = require("gemini-api").default;
 const secret = "yourSecret";
 const key = "yourkey";
 const ccAPIKey = "yourCCkey";
-
 const restClient = new GeminiAPI({ key, secret, sandbox: true });
 
 const CryptoCompareAPI = require("cryptocompare");
