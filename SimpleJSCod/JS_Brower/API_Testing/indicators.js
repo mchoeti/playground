@@ -28,9 +28,9 @@ module.exports = {
                 }
                 //console.log(data[0]);
                 //console.log(data.length);
-                var movingAverage = sum / hours;
+                var movingAverage = Math.floor(sum / hours);
                 callback(movingAverage);
-                console.log("From Indicators Hour: ", movingAverage);
+                //console.log("From Indicators Hour: ", movingAverage);
             })
             .catch(console.error);
     },
