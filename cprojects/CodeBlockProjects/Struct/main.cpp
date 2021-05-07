@@ -14,6 +14,7 @@ struct Marriage {
     Person personB ;
     int ageOfMarrige;
     int numOfPeopleAtWedding;
+    string Stimmung;
 };
 // Function for Print information
 void printPersonInfo (Person p) {
@@ -26,6 +27,7 @@ void printMarriageInfo (Marriage m) {
     cout << m.personA.name << " married " << m.personB.name  << endl ;
     cout << " They are married for " << m.ageOfMarrige  << " years" << endl ;
     cout << " ........ and " << m.numOfPeopleAtWedding << "  people came to their wedding" << endl ;
+    cout << " Es war... " << m.Stimmung << "  .......  no more words to say" << endl ;
 }
 
 int main()
@@ -53,7 +55,7 @@ int main()
     printPersonInfo(christian);
     printPersonInfo(doris);
 
-    Marriage marriage = { christian , doris , 20 , 121};
+    Marriage marriage = { christian , doris , 20 , 121, "SuperGeil"};
     printMarriageInfo(marriage);
 
 
