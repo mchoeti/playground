@@ -9,6 +9,20 @@ class Person {
         int age;
         string gender;
 
+        // using constructors
+        Person ( string n, int a , string g ) {
+            name = n ;
+            age = a;
+            gender = g;
+        }
+
+        // oder eben was anderes
+        Person ( ) {
+            name = "Default name please give more information" ;
+            age = 99;
+            gender = "Default , please give more information";
+        }
+
         void printInfo () {
             cout << "The name is: " << name << endl ;
             cout << "The age is: " << age << endl ;
@@ -20,14 +34,23 @@ int main()
 {
     cout << "Hello world!" << endl;
 
-    Person christian = { "Chris", 33, "MALE"};
-    Person doris = { "Dorella", 22, "FeMale"};
+    // crazy
+    //Person christian = { "Chris", 33, "MALE"};
+    //Person doris = { "Dorella", 22, "FeMale"};
+    // so machen wir es richtig :-)
+    Person christian  = Person ( "Chris", 33, "MALE" );
+    Person doris = Person ( "Dorella", 22, "FeMale" );
+    Person someone = Person ();
+
 
     //cout << christian.name;
     christian.printInfo();
     cout << "------------------------" << endl;
-     cout << "------------------------" << endl;
+    cout << "------------------------" << endl;
     doris.printInfo();
+    cout << "------------------------" << endl;
+    cout << "------------------------" << endl;
+    someone.printInfo();
     return 0;
 }
 
