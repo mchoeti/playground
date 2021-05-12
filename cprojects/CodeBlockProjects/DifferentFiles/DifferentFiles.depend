@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1620811617 source:c:\codeme\mchoetigit\playground\cprojects\codeblockprojects\differentfiles\src\car.cpp
+	<iostream>
+	"Car.h"
+
+1620811448 c:\codeme\mchoetigit\playground\cprojects\codeblockprojects\differentfiles\include\car.h
+
