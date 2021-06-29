@@ -89,6 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Danach Wert wieder zurücksetzen
             neuesToDo.value = "";
+            
+
+                             console.log("Hallo Zusammen");
+
 
 
             // Dieses HTML Element muss ich mit JS erstellen, also LI , div , input , label und button
