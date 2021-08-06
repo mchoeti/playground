@@ -25,7 +25,7 @@ axios.get("https://api.nal.usda.gov/fdc/v1/foods/search", {
             query: "Apple Juice"
         }
     })
-    .then(function(response) {
+    .then(function (response) {
         //console.log(response);
         console.log("Status is: ", response.status);
         console.log("Insgesamt gibts: ", response.data.totalHits);
